@@ -37,15 +37,11 @@ namespace MedicalTest
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button_back = new System.Windows.Forms.Button();
-			this.databaseDataSet = new MedicalTest.DatabaseDataSet();
 			this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.patientsTableAdapter = new MedicalTest.DatabaseDataSetTableAdapters.PatientsTableAdapter();
 			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -121,20 +117,6 @@ namespace MedicalTest
 			this.button_back.UseVisualStyleBackColor = true;
 			this.button_back.Click += new System.EventHandler(this.button_back_Click);
 			// 
-			// databaseDataSet
-			// 
-			this.databaseDataSet.DataSetName = "DatabaseDataSet";
-			this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// patientsBindingSource
-			// 
-			this.patientsBindingSource.DataMember = "Patients";
-			this.patientsBindingSource.DataSource = this.databaseDataSet;
-			// 
-			// patientsTableAdapter
-			// 
-			this.patientsTableAdapter.ClearBeforeFill = true;
-			// 
 			// listBox1
 			// 
 			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,8 +143,6 @@ namespace MedicalTest
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -176,9 +156,7 @@ namespace MedicalTest
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox textBox1;
-		private DatabaseDataSet databaseDataSet;
 		private System.Windows.Forms.BindingSource patientsBindingSource;
-		private DatabaseDataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
 		private System.Windows.Forms.ListBox listBox1;
 	}
 }
