@@ -19,7 +19,7 @@ namespace Model
 			throw new NotImplementedException();
 		}
 
-		public Task<Examination> GetAll()
+		public async Task<List<Examination>> GetAll()
 		{
 			throw new NotImplementedException();
 		}

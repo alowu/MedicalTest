@@ -9,19 +9,20 @@ namespace Model.Servise
 {
 	class ExaminationServise : IExaminationServise
 	{
+		private ExaminationRepository _examinationRepository;
 		public Task<Examination> Create(Examination item)
 		{
-			throw new NotImplementedException();
+			return _examinationRepository.Create(item);
 		}
 
 		public Task<Examination> Delete(int id)
 		{
-			throw new NotImplementedException();
+			return _examinationRepository.Delete(id);
 		}
 
-		public Task<Examination> GetAll()
+		public Task<List<Examination>> GetAll()
 		{
-			throw new NotImplementedException();
+			return _examinationRepository.GetAll();
 		}
 
 		public Task<Examination> Update(Examination item)

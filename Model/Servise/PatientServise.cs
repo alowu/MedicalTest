@@ -21,7 +21,7 @@ namespace Model.Servise
 			return _patientRepository.Delete(id);
 		}
 
-		public Task<Patient> GetAll()
+		public Task<List<Patient>> GetAll()
 		{
 			return _patientRepository.GetAll();
 		}

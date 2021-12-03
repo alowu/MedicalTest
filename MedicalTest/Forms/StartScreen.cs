@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace MedicalTest
 {
 	public partial class StartScreen : Form
 	{
+	
 		public StartScreen()
 		{
 			InitializeComponent();
+			Program.connectionDb.ConnectDB();
 		}
 
 		private void button_admin_Click(object sender, EventArgs e)
@@ -27,6 +30,10 @@ namespace MedicalTest
 		{
 			DoctorScreen doctorScreen = new DoctorScreen();
 			doctorScreen.ShowDialog();
+		}
+
+		private void StartScreen_Load(object sender, EventArgs e)
+		{
 		}
 	}
 }

@@ -149,5 +149,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{647a243c-c3fc-48c0-9afc-31a87a6fa8b2}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presenter\Presentation.csproj">
+      <Project>{b1f85037-c2d9-4012-b739-2eeb59df6ab3}</Project>
+      <Name>Presentation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

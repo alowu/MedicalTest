@@ -8,7 +8,7 @@ namespace Model
 {
 	public interface IRepository<T> where T : class
 	{
-		Task<T> GetAll();
+		Task<List<T>> GetAll();
 		Task<T> Create(T item);
 		Task<T> Update(T item);
 		Task<T> Delete(int id);
