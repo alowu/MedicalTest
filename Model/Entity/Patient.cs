@@ -6,39 +6,39 @@ using System.Threading.Tasks;
 
 namespace Model.Entity
 {
-	class Patient
+	public class Patient
 	{
-		public Guid Id
+		public int id
 		{
 			get;
 			set;
 		}
 
-		public string FirstName
+		public string firstName
 		{ 
 			get;
 			set;
 		}
 
-		public string MiddleName
+		public string middleName
 		{
 			get;
 			set;
 		}
 
-		public string LastName
+		public string lastName
 		{
 			get;
 			set;
 		}
 
-		public int Age
+		public int age
 		{
 			get;
 			set;
 		}
 
-		public Sex Sex
+		public Sex sex
 		{
 			get;
 			set;

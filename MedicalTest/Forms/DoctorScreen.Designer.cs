@@ -29,16 +29,14 @@ namespace MedicalTest
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button_back = new System.Windows.Forms.Button();
-			this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -65,6 +63,16 @@ namespace MedicalTest
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Список пациентов";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// listBox1
+			// 
+			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 17;
+			this.listBox1.Location = new System.Drawing.Point(3, 3);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(1266, 637);
+			this.listBox1.TabIndex = 0;
 			// 
 			// tabPage2
 			// 
@@ -117,16 +125,6 @@ namespace MedicalTest
 			this.button_back.UseVisualStyleBackColor = true;
 			this.button_back.Click += new System.EventHandler(this.button_back_Click);
 			// 
-			// listBox1
-			// 
-			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 17;
-			this.listBox1.Location = new System.Drawing.Point(3, 3);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(1266, 637);
-			this.listBox1.TabIndex = 0;
-			// 
 			// DoctorScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,7 +154,6 @@ namespace MedicalTest
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.BindingSource patientsBindingSource;
 		private System.Windows.Forms.ListBox listBox1;
 	}
 }

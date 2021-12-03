@@ -48,7 +48,6 @@
     <Compile Include="Entity\Examination.cs" />
     <Compile Include="Entity\Sensor.cs" />
     <Compile Include="Entity\Patient.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
