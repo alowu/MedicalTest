@@ -67,8 +67,9 @@ namespace MedicalTest
 			// listBox1
 			// 
 			this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listBox1.Font = new System.Drawing.Font("JetBrains Mono", 10.2F);
 			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 17;
+			this.listBox1.ItemHeight = 22;
 			this.listBox1.Location = new System.Drawing.Point(3, 3);
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(1266, 637);

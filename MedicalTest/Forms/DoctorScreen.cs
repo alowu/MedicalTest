@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Model.Entity;
+using Presenter.Presenters;
 
 namespace MedicalTest
 {
 	public partial class DoctorScreen : Form
 	{
+		DoctorPresenter presenter = new DoctorPresenter();
 		public DoctorScreen()
 		{
 			InitializeComponent();
@@ -31,7 +34,12 @@ namespace MedicalTest
 
 		private void DoctorScreen_Load(object sender, EventArgs e)
 		{
-			
+			List<Patient> patients = new List<Patient>();
+			patients = presenter.ShowDoctor();
+			foreach (Patient patient in patients)
+			{
+				listBox1.Items.Add(patient.ToString());
+			}
 		}
 	}
 }
