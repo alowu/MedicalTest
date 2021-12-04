@@ -33,6 +33,7 @@ namespace MedicalTest
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.label_status_add = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@ namespace MedicalTest
 			this.textBox_name = new System.Windows.Forms.TextBox();
 			this.textBox_surname = new System.Windows.Forms.TextBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.label_update_status = new System.Windows.Forms.Label();
 			this.button_change = new System.Windows.Forms.Button();
 			this.label11 = new System.Windows.Forms.Label();
 			this.textBox_id_change = new System.Windows.Forms.TextBox();
@@ -61,6 +63,7 @@ namespace MedicalTest
 			this.textBox_name_change = new System.Windows.Forms.TextBox();
 			this.textBox_surname_change = new System.Windows.Forms.TextBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.label_delete = new System.Windows.Forms.Label();
 			this.button_del = new System.Windows.Forms.Button();
 			this.label12 = new System.Windows.Forms.Label();
 			this.textBox_id_del = new System.Windows.Forms.TextBox();
@@ -80,7 +83,6 @@ namespace MedicalTest
 			this.textBox_id_nazn = new System.Windows.Forms.TextBox();
 			this.button_back = new System.Windows.Forms.Button();
 			this.button_update = new System.Windows.Forms.Button();
-			this.label_status_add = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -150,6 +152,15 @@ namespace MedicalTest
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Добавить пациента";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// label_status_add
+			// 
+			this.label_status_add.AutoSize = true;
+			this.label_status_add.Location = new System.Drawing.Point(557, 99);
+			this.label_status_add.Name = "label_status_add";
+			this.label_status_add.Size = new System.Drawing.Size(0, 18);
+			this.label_status_add.TabIndex = 12;
+			this.label_status_add.Visible = false;
 			// 
 			// label5
 			// 
@@ -269,6 +280,7 @@ namespace MedicalTest
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.label_update_status);
 			this.tabPage3.Controls.Add(this.button_change);
 			this.tabPage3.Controls.Add(this.label11);
 			this.tabPage3.Controls.Add(this.textBox_id_change);
@@ -290,6 +302,15 @@ namespace MedicalTest
 			this.tabPage3.Text = "Изменить пациента";
 			this.tabPage3.UseVisualStyleBackColor = true;
 			// 
+			// label_update_status
+			// 
+			this.label_update_status.AutoSize = true;
+			this.label_update_status.Location = new System.Drawing.Point(507, 158);
+			this.label_update_status.Name = "label_update_status";
+			this.label_update_status.Size = new System.Drawing.Size(0, 18);
+			this.label_update_status.TabIndex = 25;
+			this.label_update_status.Visible = false;
+			// 
 			// button_change
 			// 
 			this.button_change.Font = new System.Drawing.Font("JetBrains Mono", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -299,6 +320,7 @@ namespace MedicalTest
 			this.button_change.TabIndex = 3;
 			this.button_change.Text = "Изменить";
 			this.button_change.UseVisualStyleBackColor = true;
+			this.button_change.Click += new System.EventHandler(this.button_change_Click);
 			// 
 			// label11
 			// 
@@ -315,6 +337,7 @@ namespace MedicalTest
 			this.textBox_id_change.Name = "textBox_id_change";
 			this.textBox_id_change.Size = new System.Drawing.Size(200, 25);
 			this.textBox_id_change.TabIndex = 23;
+			this.textBox_id_change.Text = "0";
 			// 
 			// label6
 			// 
@@ -423,6 +446,7 @@ namespace MedicalTest
 			// 
 			// tabPage4
 			// 
+			this.tabPage4.Controls.Add(this.label_delete);
 			this.tabPage4.Controls.Add(this.button_del);
 			this.tabPage4.Controls.Add(this.label12);
 			this.tabPage4.Controls.Add(this.textBox_id_del);
@@ -433,6 +457,15 @@ namespace MedicalTest
 			this.tabPage4.Text = "Удалить пациента";
 			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
+			// label_delete
+			// 
+			this.label_delete.AutoSize = true;
+			this.label_delete.Location = new System.Drawing.Point(574, 137);
+			this.label_delete.Name = "label_delete";
+			this.label_delete.Size = new System.Drawing.Size(0, 18);
+			this.label_delete.TabIndex = 28;
+			this.label_delete.Visible = false;
+			// 
 			// button_del
 			// 
 			this.button_del.Font = new System.Drawing.Font("JetBrains Mono", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -442,6 +475,7 @@ namespace MedicalTest
 			this.button_del.TabIndex = 27;
 			this.button_del.Text = "Удалить";
 			this.button_del.UseVisualStyleBackColor = true;
+			this.button_del.Click += new System.EventHandler(this.button_del_Click);
 			// 
 			// label12
 			// 
@@ -458,6 +492,7 @@ namespace MedicalTest
 			this.textBox_id_del.Name = "textBox_id_del";
 			this.textBox_id_del.Size = new System.Drawing.Size(200, 25);
 			this.textBox_id_del.TabIndex = 25;
+			this.textBox_id_del.Text = "0";
 			// 
 			// tabPage5
 			// 
@@ -645,15 +680,6 @@ namespace MedicalTest
 			this.button_update.UseVisualStyleBackColor = true;
 			this.button_update.Click += new System.EventHandler(this.button_update_Click);
 			// 
-			// label_status_add
-			// 
-			this.label_status_add.AutoSize = true;
-			this.label_status_add.Location = new System.Drawing.Point(557, 99);
-			this.label_status_add.Name = "label_status_add";
-			this.label_status_add.Size = new System.Drawing.Size(0, 18);
-			this.label_status_add.TabIndex = 12;
-			this.label_status_add.Visible = false;
-			// 
 			// AdminScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -739,5 +765,7 @@ namespace MedicalTest
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label_status_add;
+		private System.Windows.Forms.Label label_update_status;
+		private System.Windows.Forms.Label label_delete;
 	}
 }

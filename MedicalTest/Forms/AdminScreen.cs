@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Presenter.View;
 using Presenter.Presenters;
 using System.Collections;
 using Model.Entity;
 
 namespace MedicalTest
 {
-	public partial class AdminScreen : Form, IAdminView
+	public partial class AdminScreen : Form
 	{
 		AdminPresenter presenter = new AdminPresenter();
 		public AdminScreen()
@@ -82,6 +81,63 @@ namespace MedicalTest
 		{
 			listBox1.Items.Clear();
 			AdminScreen_Load(sender, e);
+		}
+
+		private void button_change_Click(object sender, EventArgs e)
+		{
+			int id = int.Parse(textBox_id_change.Text);
+			string firstName = textBox_surname_change.Text;
+			string middleName = textBox_name_change.Text;
+			string lastName = textBox_dad_name_change.Text;
+			int age = (int)numericUpDown_age_change.Value;
+			Sex sex;
+			if (radioButton_male_change.Checked)
+			{
+				sex = Sex.Male;
+			}
+			else if (radioButton_female_change.Checked)
+			{
+				sex = Sex.Female;
+			}
+			else
+			{
+				sex = Sex.Error;
+			}
+
+			Patient patient = new Patient(id, firstName, middleName, lastName, age, sex);
+
+			if (presenter.Udpate(patient))
+			{
+				label_update_status.Text = "Пациент изменен!";
+				label_update_status.Visible = true;
+				label_update_status.ForeColor = Color.Green;
+			}
+			else
+			{
+				label_update_status.Text = "Неправильно введены данные";
+				label_update_status.Visible = true;
+				label_update_status.ForeColor = Color.Red;
+			}
+		}
+
+		private void button_del_Click(object sender, EventArgs e)
+		{
+			int id = int.Parse(textBox_id_del.Text);
+
+			Patient patient = new Patient(id);
+
+			if (presenter.Delete(patient))
+			{
+				label_delete.Text = "Пациент удален!";
+				label_delete.Visible = true;
+				label_delete.ForeColor = Color.Green;
+			}
+			else
+			{
+				label_delete.Text = "Пациент не найден";
+				label_delete.Visible = true;
+				label_delete.ForeColor = Color.Red;
+			}
 		}
 	}
 }

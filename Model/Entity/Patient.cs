@@ -19,6 +19,16 @@ namespace Model.Entity
 			this.hasExam = hasExam;
 		}
 
+		public Patient(int id, string firstName, string middleName, string lastName, int age, Sex sex)
+		{
+			this.id = id;
+			this.firstName = firstName;
+			this.middleName = middleName;
+			this.lastName = lastName;
+			this.age = age;
+			this.sex = sex;
+		}
+
 		public Patient(string firstName, string middleName, string lastName, int age, Sex sex)
 		{
 			this.firstName = firstName;
@@ -26,6 +36,11 @@ namespace Model.Entity
 			this.lastName = lastName;
 			this.age = age;
 			this.sex = sex;
+		}
+
+		public Patient(int id)
+		{
+			this.id = id;
 		}
 
 		public int id

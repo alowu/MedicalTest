@@ -9,6 +9,7 @@ namespace Model
 	public interface IRepository<T> where T : class
 	{
 		List<T> GetAll();
+		T FindById(int Id);
 		bool Create(T item);
 		bool Update(T item);
 		bool Delete(int id);

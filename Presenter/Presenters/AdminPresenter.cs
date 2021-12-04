@@ -1,6 +1,5 @@
 ﻿using Model.Entity;
 using Model.Servise;
-using Presenter.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +26,16 @@ namespace Presenter.Presenters
 		public bool Add(Patient patient)
 		{
 			return patientServise.Create(patient);
+		}
+
+		public bool Udpate(Patient patient)
+		{
+			return patientServise.Update(patient);
+		}
+
+		public bool Delete(Patient patient)
+		{
+			return patientServise.Delete(patient.id);
 		}
 	}
 }

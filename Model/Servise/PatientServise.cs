@@ -18,36 +18,76 @@ namespace Model.Servise
 			_patientRepository = new PatientRepository();
 		}
 
-		public bool Create(Patient item)
+		private bool isValid(Patient item)
 		{
-			// проверка на правильность данных
-			bool notValid = false;
+			bool isValid = true;
 			if (string.IsNullOrEmpty(item.firstName) && string.IsNullOrWhiteSpace(item.firstName) ||
 				string.IsNullOrEmpty(item.middleName) && string.IsNullOrWhiteSpace(item.middleName) ||
 				string.IsNullOrEmpty(item.lastName) && string.IsNullOrWhiteSpace(item.lastName) ||
 				item.sex.Equals(Sex.Error))
 			{
-				return notValid;
+				isValid = false;
+			}
+			return isValid;
+		}
+
+		public bool Create(Patient item)
+		{
+			bool valid = isValid(item);
+			if (valid)
+			{
+				return _patientRepository.Create(item);
 			}
 			else
 			{
-				return _patientRepository.Create(item);
+				return valid;
 			}
 		}
 
 		public bool Delete(int id)
 		{
-			return _patientRepository.Delete(id);
+			bool result = false;
+			bool have = isPatient(id);
+			if (have)
+			{
+				result = _patientRepository.Delete(id);
+			}
+			return result;
 		}
 
 		public bool Update(Patient item)
 		{
-			return _patientRepository.Update(item);
+			bool result = false;
+			bool have = isPatient(item.id);
+			bool valid = isValid(item);
+
+			if (have && valid)
+			{
+				result = _patientRepository.Update(item);
+			}
+			
+			return result;
 		}
 
 		public List<Patient> GetAll()
 		{
 			return _patientRepository.GetAll();
+		}
+
+		public Patient GetPatient(int Id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool isPatient(int Id)
+		{
+			bool havePatient = true;
+			Patient patient = _patientRepository.FindById(Id);
+			if (patient == null)
+			{
+				havePatient = false;
+			}
+			return havePatient;
 		}
 	}
 }

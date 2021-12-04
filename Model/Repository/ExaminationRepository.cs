@@ -28,5 +28,10 @@ namespace Model
 		{
 			throw new NotImplementedException();
 		}
+
+		public Examination FindById(int Id)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
