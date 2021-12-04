@@ -11,29 +11,36 @@ namespace Model.Servise
 	public class PatientServise : IPatientServise
 	{
 
-		private PatientRepository _patientRepository;//= new PatientRepository();
+		private PatientRepository _patientRepository;
 
 		public PatientServise()
 		{
 			_patientRepository = new PatientRepository();
 		}
 
-		public Task<Patient> Create(Patient item)
+		public bool Create(Patient item)
 		{
-			return _patientRepository.Create(item);
+			// проверка на правильность данных
+			bool notValid = false;
+			if (string.IsNullOrEmpty(item.firstName) && string.IsNullOrWhiteSpace(item.firstName) ||
+				string.IsNullOrEmpty(item.middleName) && string.IsNullOrWhiteSpace(item.middleName) ||
+				string.IsNullOrEmpty(item.lastName) && string.IsNullOrWhiteSpace(item.lastName) ||
+				item.sex.Equals(Sex.Error))
+			{
+				return notValid;
+			}
+			else
+			{
+				return _patientRepository.Create(item);
+			}
 		}
 
-		public Task<Patient> Delete(int id)
+		public bool Delete(int id)
 		{
 			return _patientRepository.Delete(id);
 		}
 
-		/*public Task<List<Patient>> GetAll()
-		{
-			return _patientRepository.GetAll();
-		}*/
-
-		public Task<Patient> Update(Patient item)
+		public bool Update(Patient item)
 		{
 			return _patientRepository.Update(item);
 		}

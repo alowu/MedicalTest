@@ -9,9 +9,9 @@ namespace Model.Servise
 {
 	public interface IExaminationServise
 	{
-		Task<List<Examination>> GetAll();
-		Task<Examination> Create(Examination item);
-		Task<Examination> Update(Examination item);
-		Task<Examination> Delete(int id);
+		List<Examination> GetAll();
+		bool Create(Examination item);
+		bool Update(Examination item);
+		bool Delete(int id);
 	}
 }

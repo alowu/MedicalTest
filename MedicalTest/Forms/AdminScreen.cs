@@ -37,5 +37,51 @@ namespace MedicalTest
 				listBox1.Items.Add(patient.ToString());
 			}
 		}
+
+		private void button_add_Click(object sender, EventArgs e)
+		{
+			if (label_status_add.Visible)
+			{
+				label_status_add.Visible = false;
+			}
+			string firstName = textBox_surname.Text;
+			string middleName = textBox_name.Text;
+			string lastName = textBox_dad_name.Text;
+			int age = (int)numericUpDown_age.Value;
+			Sex sex;
+			if (radioButton_male.Checked)
+			{
+				sex = Sex.Male;
+			}
+			else if (radioButton_female.Checked)
+			{
+				sex = Sex.Female;
+			}
+			else
+			{
+				sex = Sex.Error;
+			}
+
+			Patient patient = new Patient(firstName, middleName, lastName, age, sex);
+
+			if (presenter.Add(patient))
+			{
+				label_status_add.Text = "Пациент добавлен!";
+				label_status_add.Visible = true;
+				label_status_add.ForeColor = Color.Green;
+			}
+			else
+			{
+				label_status_add.Text = "Неправильно введены данные";
+				label_status_add.Visible = true;
+				label_status_add.ForeColor = Color.Red;
+			}
+		}
+
+		private void button_update_Click(object sender, EventArgs e)
+		{
+			listBox1.Items.Clear();
+			AdminScreen_Load(sender, e);
+		}
 	}
 }

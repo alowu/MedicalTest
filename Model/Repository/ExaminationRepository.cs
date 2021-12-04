@@ -9,27 +9,22 @@ namespace Model
 {
 	public class ExaminationRepository : IRepository<Examination>
 	{
-		public Task<Examination> Create(Examination item)
+		public bool Create(Examination item)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task<Examination> Delete(int id)
+		public bool Delete(int id)
 		{
 			throw new NotImplementedException();
 		}
 
-		public async Task<List<Examination>> GetAll()
+		public bool Update(Examination item)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task<Examination> Update(Examination item)
-		{
-			throw new NotImplementedException();
-		}
-
-		List<Examination> IRepository<Examination>.GetAll()
+		public List<Examination> GetAll()
 		{
 			throw new NotImplementedException();
 		}

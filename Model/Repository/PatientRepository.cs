@@ -14,60 +14,43 @@ namespace Model
 		private ConnectionDB DB = new ConnectionDB();
 		private SqlDataReader dataReader = null;
 		private SqlCommand sqlCommand = null;
-		public Task<Patient> Create(Patient item)
-		{
-			throw new NotImplementedException();
-		}
 
 		public PatientRepository()
 		{
 			DB.ConnectDB();
 		}
 
-		public Task<Patient> Delete(int id)
+		public bool Create(Patient item)
+		{
+			bool result = false;
+			try
+			{
+				sqlCommand = new SqlCommand("INSERT INTO [Patients] (firstName, middleName, lastName, age, sex) VALUES (@firstName, @middleName, @lastName, @age, @sex)", DB._getConnection());
+
+				sqlCommand.Parameters.AddWithValue("firstName", item.firstName);
+				sqlCommand.Parameters.AddWithValue("middleName", item.middleName);
+				sqlCommand.Parameters.AddWithValue("lastName", item.lastName);
+				sqlCommand.Parameters.AddWithValue("age", item.age);
+				sqlCommand.Parameters.AddWithValue("sex", item.sex);
+
+				sqlCommand.ExecuteNonQuery();
+
+				result = true;
+			}
+			catch (Exception ex)
+			{
+				Console.Error.WriteLine("Can't INSERT INTO Patients!\n" + ex.ToString());
+			}
+
+			return result;
+		}
+
+		public bool Delete(int id)
 		{
 			throw new NotImplementedException();
 		}
 
-		/*public async Task<List<Patient>> GetAll()
-		{
-			List<Patient> patients = new List<Patient>();
-
-			sqlCommand = new SqlCommand("SELECT * FROM [Patients]", DB._getConnection());
-
-			try
-			{
-				dataReader = await sqlCommand.ExecuteReaderAsync();
-				while (await dataReader.ReadAsync())
-				{
-					int id = (int)dataReader["id"];
-					string firstName = (string)dataReader["firstName"];
-					string middleName = (string)dataReader["middleName"];
-					string lastName = (string)dataReader["lastName"];
-					int age = (int)dataReader["age"];
-					Sex sex = (Sex)dataReader["sex"];
-					bool hasExam = (bool)dataReader["hasExam"];
-
-					Patient patient = new Patient(id, firstName, middleName, lastName, age, sex, hasExam);
-
-					patients.Add(patient);
-				}
-			}
-			catch (Exception ex)
-			{
-				Console.Error.WriteLine("Can't select from Patients!\n" + ex.ToString());
-			}
-			finally
-			{
-				if (dataReader != null)
-				{
-					dataReader.Close();
-				}
-			}
-			return patients;
-		}*/
-
-		public Task<Patient> Update(Patient item)
+		public bool Update(Patient item)
 		{
 			throw new NotImplementedException();
 		}
@@ -98,7 +81,7 @@ namespace Model
 			}
 			catch (Exception ex)
 			{
-				Console.Error.WriteLine("Can't select from Patients!\n" + ex.ToString());
+				Console.Error.WriteLine("Can't SELECT FROM Patients!\n" + ex.ToString());
 			}
 			finally
 			{

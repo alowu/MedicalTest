@@ -10,24 +10,24 @@ namespace Model.Servise
 	class ExaminationServise : IExaminationServise
 	{
 		private ExaminationRepository _examinationRepository;
-		public Task<Examination> Create(Examination item)
+		public bool Create(Examination item)
 		{
 			return _examinationRepository.Create(item);
 		}
 
-		public Task<Examination> Delete(int id)
+		public bool Delete(int id)
 		{
 			return _examinationRepository.Delete(id);
 		}
 
-		public Task<List<Examination>> GetAll()
+		public List<Examination> GetAll()
 		{
 			return _examinationRepository.GetAll();
 		}
 
-		public Task<Examination> Update(Examination item)
+		public bool Update(Examination item)
 		{
-			throw new NotImplementedException();
+			return _examinationRepository.Update(item);
 		}
 	}
 }

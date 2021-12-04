@@ -23,5 +23,10 @@ namespace Presenter.Presenters
 			patients = patientServise.GetAll();
 			return patients;
 		}
+
+		public bool Add(Patient patient)
+		{
+			return patientServise.Create(patient);
+		}
 	}
 }

@@ -9,7 +9,8 @@ namespace Model.Entity
 	public enum Sex
 	{ 
 		Female = 0,
-		Male = 1
+		Male = 1,
+		Error = 2
 	}
 
 	public enum TypePhysicalActive

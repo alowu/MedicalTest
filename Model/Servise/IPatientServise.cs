@@ -10,8 +10,8 @@ namespace Model.Servise
 	public interface IPatientServise
 	{
 		List<Patient> GetAll();
-		Task<Patient> Create(Patient item);
-		Task<Patient> Update(Patient item);
-		Task<Patient> Delete(int id);
+		bool Create(Patient item);
+		bool Update(Patient item);
+		bool Delete(int id);
 	}
 }

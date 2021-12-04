@@ -80,6 +80,7 @@ namespace MedicalTest
 			this.textBox_id_nazn = new System.Windows.Forms.TextBox();
 			this.button_back = new System.Windows.Forms.Button();
 			this.button_update = new System.Windows.Forms.Button();
+			this.label_status_add = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -129,6 +130,7 @@ namespace MedicalTest
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.label_status_add);
 			this.tabPage2.Controls.Add(this.label5);
 			this.tabPage2.Controls.Add(this.label4);
 			this.tabPage2.Controls.Add(this.label3);
@@ -203,6 +205,7 @@ namespace MedicalTest
 			this.button_add.TabIndex = 6;
 			this.button_add.Text = "Добавить";
 			this.button_add.UseVisualStyleBackColor = true;
+			this.button_add.Click += new System.EventHandler(this.button_add_Click);
 			// 
 			// numericUpDown_age
 			// 
@@ -640,6 +643,16 @@ namespace MedicalTest
 			this.button_update.TabIndex = 2;
 			this.button_update.Text = "Обновить";
 			this.button_update.UseVisualStyleBackColor = true;
+			this.button_update.Click += new System.EventHandler(this.button_update_Click);
+			// 
+			// label_status_add
+			// 
+			this.label_status_add.AutoSize = true;
+			this.label_status_add.Location = new System.Drawing.Point(557, 99);
+			this.label_status_add.Name = "label_status_add";
+			this.label_status_add.Size = new System.Drawing.Size(0, 18);
+			this.label_status_add.TabIndex = 12;
+			this.label_status_add.Visible = false;
 			// 
 			// AdminScreen
 			// 
@@ -725,5 +738,6 @@ namespace MedicalTest
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Label label_status_add;
 	}
 }
