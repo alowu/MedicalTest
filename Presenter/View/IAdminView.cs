@@ -10,6 +10,6 @@ namespace Presenter.View
 {
 	public interface IAdminView
 	{
-		Patient patient { get; set; }
+		//Patient patient { get; set; }
 	}
 }

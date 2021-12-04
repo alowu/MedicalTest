@@ -9,7 +9,7 @@ namespace Model.Servise
 {
 	public interface IPatientServise
 	{
-		Task<List<Patient>> GetAll();
+		List<Patient> GetAll();
 		Task<Patient> Create(Patient item);
 		Task<Patient> Update(Patient item);
 		Task<Patient> Delete(int id);

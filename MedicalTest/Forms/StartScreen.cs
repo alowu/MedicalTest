@@ -17,7 +17,6 @@ namespace MedicalTest
 		public StartScreen()
 		{
 			InitializeComponent();
-			Program.connectionDb.ConnectDB();
 		}
 
 		private void button_admin_Click(object sender, EventArgs e)

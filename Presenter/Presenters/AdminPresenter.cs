@@ -1,4 +1,5 @@
-﻿using Model.Servise;
+﻿using Model.Entity;
+using Model.Servise;
 using Presenter.View;
 using System;
 using System.Collections.Generic;
@@ -10,16 +11,17 @@ namespace Presenter.Presenters
 {
 	public class AdminPresenter
 	{
-		private IPatientServise patientServise;
+		private PatientServise patientServise = new PatientServise();
+		List<Patient> patients = null;
 
-		public AdminPresenter(IAdminView view)
+		public AdminPresenter()
 		{
-			//adminView = view;
 		}
 
-		public void ShowAdmin()
+		public List<Patient> ShowAdmin()
 		{
-
+			patients = patientServise.GetAll();
+			return patients;
 		}
 	}
 }

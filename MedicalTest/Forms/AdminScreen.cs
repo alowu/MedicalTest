@@ -17,13 +17,7 @@ namespace MedicalTest
 {
 	public partial class AdminScreen : Form, IAdminView
 	{
-		//AdminPresenter presenter = new AdminPresenter();
-		public Patient patient
-		{ 
-			get => throw new NotImplementedException(); 
-			set => throw new NotImplementedException(); 
-		}
-		
+		AdminPresenter presenter = new AdminPresenter();
 		public AdminScreen()
 		{
 			InitializeComponent();
@@ -31,13 +25,17 @@ namespace MedicalTest
 
 		private void button_back_Click(object sender, EventArgs e)
 		{
-
 			this.Close();
 		}
 
 		private void AdminScreen_Load(object sender, EventArgs e)
 		{
-			//presenter.ShowAdmin();
+			List<Patient> patients = new List<Patient>();
+			patients = presenter.ShowAdmin();
+			foreach (Patient patient in patients)
+			{
+				listBox1.Items.Add(patient.ToString());
+			}
 		}
 	}
 }

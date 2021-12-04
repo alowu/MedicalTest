@@ -26,11 +26,11 @@ namespace Model
             return sqlConnection;
 		}
 
-        public async void ConnectDB()
+        public void ConnectDB()
         {
 			try
 			{
-                await sqlConnection.OpenAsync();
+                sqlConnection.Open();
             }
 			catch (Exception ex)
 			{
@@ -44,7 +44,7 @@ namespace Model
 
         public void CloseDB()
         {
-
+            sqlConnection.Close();
         }
     }
 }

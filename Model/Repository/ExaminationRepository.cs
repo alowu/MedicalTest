@@ -28,5 +28,10 @@ namespace Model
 		{
 			throw new NotImplementedException();
 		}
+
+		List<Examination> IRepository<Examination>.GetAll()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

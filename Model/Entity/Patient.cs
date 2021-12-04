@@ -60,5 +60,16 @@ namespace Model.Entity
 			get;
 			set;
 		}
+
+		public override string ToString()
+		{
+			return id.ToString() + " " +
+				firstName.ToString() + " " +
+				middleName.ToString() + " " +
+				lastName.ToString() + " " +
+				age.ToString() + " " +
+				sex.ToString() + " " + 
+				hasExam.ToString();
+		}
 	}
 }

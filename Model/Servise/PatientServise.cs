@@ -10,7 +10,14 @@ namespace Model.Servise
 {
 	public class PatientServise : IPatientServise
 	{
-		private PatientRepository _patientRepository;
+
+		private PatientRepository _patientRepository;//= new PatientRepository();
+
+		public PatientServise()
+		{
+			_patientRepository = new PatientRepository();
+		}
+
 		public Task<Patient> Create(Patient item)
 		{
 			return _patientRepository.Create(item);
@@ -21,14 +28,19 @@ namespace Model.Servise
 			return _patientRepository.Delete(id);
 		}
 
-		public Task<List<Patient>> GetAll()
+		/*public Task<List<Patient>> GetAll()
 		{
 			return _patientRepository.GetAll();
-		}
+		}*/
 
 		public Task<Patient> Update(Patient item)
 		{
 			return _patientRepository.Update(item);
+		}
+
+		public List<Patient> GetAll()
+		{
+			return _patientRepository.GetAll();
 		}
 	}
 }
