@@ -84,7 +84,42 @@ namespace Model
 
 		public Examination GetT(int Id)
 		{
-			throw new NotImplementedException();
+			Examination examination = null;
+
+			string command = "SELECT * FROM [Examinations] WHERE patientId=";
+			command += Id;
+
+			sqlCommand = new SqlCommand(command, DB._getConnection());
+
+			try
+			{
+				dataReader = sqlCommand.ExecuteReader();
+				dataReader.Read();
+
+				int id = (int)dataReader["patientId"];
+				TypePhysicalActive physicalActive = (TypePhysicalActive)dataReader["physicalActive"];
+				int time = (int)dataReader["timeActive"];
+				bool p = (bool)dataReader["statePresure"];
+				bool t = (bool)dataReader["stateTemperature"];
+				bool h = (bool)dataReader["stateHumidity"];
+				bool r = (bool)dataReader["stateResist"];
+				bool c = (bool)dataReader["stateChss"];
+
+				examination = new Examination(id, physicalActive, time, p, t, h, r, c);
+
+			}
+			catch (Exception ex)
+			{
+				Console.Error.WriteLine("Can't GET_T Examinations!\n" + ex.ToString());
+			}
+			finally
+			{
+				if (dataReader != null)
+				{
+					dataReader.Close();
+				}
+			}
+			return examination;
 		}
 	}
 }

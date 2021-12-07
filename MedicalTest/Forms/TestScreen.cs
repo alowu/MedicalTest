@@ -19,14 +19,12 @@ namespace MedicalTest
 
 		GraphicsScreen graphicsScreen = new GraphicsScreen();
 
-		private void graphicsSreen_FormClosed(object sender, FormClosedEventArgs e) 
-		{
-			this.Close();
-		}
-
 		private void button_start_Click(object sender, EventArgs e)
 		{
-			graphicsScreen.ShowDialog();
+			if (graphicsScreen.ShowDialog() == DialogResult.Cancel)
+			{
+				this.Close();
+			}
 		}
 
 		private void button_back_Click(object sender, EventArgs e)
@@ -42,6 +40,11 @@ namespace MedicalTest
 			pictureBox_resist.Visible = flag;
 			pictureBox_temp.Visible = flag;
 			pictureBox_vlazh.Visible = flag;
+		}
+
+		private void TestScreen_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

@@ -38,6 +38,11 @@ namespace Model.Servise
 			return _examinationRepository.GetAll();
 		}
 
+		public Examination GetExamination(int Id)
+		{
+			return _examinationRepository.GetT(Id);
+		}
+
 		public bool Update(Examination item)
 		{
 			return _examinationRepository.Update(item);

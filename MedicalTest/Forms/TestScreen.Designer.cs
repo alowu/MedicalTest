@@ -291,6 +291,7 @@ namespace MedicalTest
 			this.Name = "TestScreen";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "TestScreen";
+			this.Load += new System.EventHandler(this.TestScreen_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_presure)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_css)).EndInit();

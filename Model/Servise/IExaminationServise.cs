@@ -10,6 +10,7 @@ namespace Model.Servise
 	public interface IExaminationServise
 	{
 		List<Examination> GetAll();
+		Examination GetExamination(int Id);
 		bool Create(Examination item);
 		bool Update(Examination item);
 		bool Delete(int id);

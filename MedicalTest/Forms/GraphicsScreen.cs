@@ -12,6 +12,7 @@ namespace MedicalTest
 {
 	public partial class GraphicsScreen : Form
 	{
+
 		public GraphicsScreen()
 		{
 			InitializeComponent();

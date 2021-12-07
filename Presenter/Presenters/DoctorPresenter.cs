@@ -11,6 +11,7 @@ namespace Presenter.Presenters
 	public class DoctorPresenter
 	{
 		private PatientServise patientServise = new PatientServise();
+		private ExaminationServise examinationServise = new ExaminationServise();
 		List<Patient> patients = null;
 
 		public DoctorPresenter() { }
@@ -19,6 +20,16 @@ namespace Presenter.Presenters
 		{
 			patients = patientServise.GetAll();
 			return patients;
+		}
+
+		public Patient GetPatient(int id)
+		{
+			return patientServise.GetPatient(id);
+		}
+
+		public Examination GetExamination(int id)
+		{
+			return examinationServise.GetExamination(id);
 		}
 	}
 }
