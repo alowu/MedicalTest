@@ -13,8 +13,6 @@ namespace Model
     {
         private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=H:\\MedicalTest\\Model\\MedicalTestDB.mdf;Integrated Security=True";
 
-        //private PatientRepository patientRepository;
-        //private ExaminationRepository examinationRepository;
         private SqlConnection sqlConnection = new SqlConnection(connectionString);
 
         public ConnectionDB()

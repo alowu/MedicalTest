@@ -63,11 +63,23 @@ namespace MedicalTest
 			this.textBox_name_change = new System.Windows.Forms.TextBox();
 			this.textBox_surname_change = new System.Windows.Forms.TextBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.label_age = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.label_sex = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.label_dad = new System.Windows.Forms.Label();
+			this.label21 = new System.Windows.Forms.Label();
+			this.label_name = new System.Windows.Forms.Label();
+			this.label19 = new System.Windows.Forms.Label();
+			this.label_familia = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
+			this.button_view_del = new System.Windows.Forms.Button();
 			this.label_delete = new System.Windows.Forms.Label();
 			this.button_del = new System.Windows.Forms.Button();
 			this.label12 = new System.Windows.Forms.Label();
 			this.textBox_id_del = new System.Windows.Forms.TextBox();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
+			this.label_test_pat_status = new System.Windows.Forms.Label();
 			this.button_add_test = new System.Windows.Forms.Button();
 			this.checkBox_css = new System.Windows.Forms.CheckBox();
 			this.checkBox_resist = new System.Windows.Forms.CheckBox();
@@ -76,8 +88,8 @@ namespace MedicalTest
 			this.checkBox_blood_pr = new System.Windows.Forms.CheckBox();
 			this.label16 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.comboBox_activity = new System.Windows.Forms.ComboBox();
+			this.numericUpDown_time = new System.Windows.Forms.NumericUpDown();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
 			this.textBox_id_nazn = new System.Windows.Forms.TextBox();
@@ -91,7 +103,7 @@ namespace MedicalTest
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_age_change)).BeginInit();
 			this.tabPage4.SuspendLayout();
 			this.tabPage5.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_time)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -446,6 +458,17 @@ namespace MedicalTest
 			// 
 			// tabPage4
 			// 
+			this.tabPage4.Controls.Add(this.label_age);
+			this.tabPage4.Controls.Add(this.label18);
+			this.tabPage4.Controls.Add(this.label_sex);
+			this.tabPage4.Controls.Add(this.label23);
+			this.tabPage4.Controls.Add(this.label_dad);
+			this.tabPage4.Controls.Add(this.label21);
+			this.tabPage4.Controls.Add(this.label_name);
+			this.tabPage4.Controls.Add(this.label19);
+			this.tabPage4.Controls.Add(this.label_familia);
+			this.tabPage4.Controls.Add(this.label17);
+			this.tabPage4.Controls.Add(this.button_view_del);
 			this.tabPage4.Controls.Add(this.label_delete);
 			this.tabPage4.Controls.Add(this.button_del);
 			this.tabPage4.Controls.Add(this.label12);
@@ -457,10 +480,106 @@ namespace MedicalTest
 			this.tabPage4.Text = "Удалить пациента";
 			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
+			// label_age
+			// 
+			this.label_age.AutoSize = true;
+			this.label_age.Location = new System.Drawing.Point(637, 357);
+			this.label_age.Name = "label_age";
+			this.label_age.Size = new System.Drawing.Size(0, 18);
+			this.label_age.TabIndex = 39;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(531, 357);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(64, 18);
+			this.label18.TabIndex = 38;
+			this.label18.Text = "Возраст";
+			// 
+			// label_sex
+			// 
+			this.label_sex.AutoSize = true;
+			this.label_sex.Location = new System.Drawing.Point(637, 308);
+			this.label_sex.Name = "label_sex";
+			this.label_sex.Size = new System.Drawing.Size(0, 18);
+			this.label_sex.TabIndex = 37;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(531, 308);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(32, 18);
+			this.label23.TabIndex = 36;
+			this.label23.Text = "Пол";
+			// 
+			// label_dad
+			// 
+			this.label_dad.AutoSize = true;
+			this.label_dad.Location = new System.Drawing.Point(637, 271);
+			this.label_dad.Name = "label_dad";
+			this.label_dad.Size = new System.Drawing.Size(0, 18);
+			this.label_dad.TabIndex = 35;
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(531, 271);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(72, 18);
+			this.label21.TabIndex = 34;
+			this.label21.Text = "Отчество";
+			// 
+			// label_name
+			// 
+			this.label_name.AutoSize = true;
+			this.label_name.Location = new System.Drawing.Point(637, 235);
+			this.label_name.Name = "label_name";
+			this.label_name.Size = new System.Drawing.Size(0, 18);
+			this.label_name.TabIndex = 33;
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.Location = new System.Drawing.Point(531, 235);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(32, 18);
+			this.label19.TabIndex = 32;
+			this.label19.Text = "Имя";
+			// 
+			// label_familia
+			// 
+			this.label_familia.AutoSize = true;
+			this.label_familia.Location = new System.Drawing.Point(637, 201);
+			this.label_familia.Name = "label_familia";
+			this.label_familia.Size = new System.Drawing.Size(0, 18);
+			this.label_familia.TabIndex = 31;
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Location = new System.Drawing.Point(531, 201);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(64, 18);
+			this.label17.TabIndex = 30;
+			this.label17.Text = "Фамилия";
+			// 
+			// button_view_del
+			// 
+			this.button_view_del.Font = new System.Drawing.Font("JetBrains Mono", 16.2F);
+			this.button_view_del.Location = new System.Drawing.Point(531, 48);
+			this.button_view_del.Name = "button_view_del";
+			this.button_view_del.Size = new System.Drawing.Size(294, 119);
+			this.button_view_del.TabIndex = 29;
+			this.button_view_del.Text = "Посмотреть пациента";
+			this.button_view_del.UseVisualStyleBackColor = true;
+			this.button_view_del.Click += new System.EventHandler(this.button_view_del_Click);
+			// 
 			// label_delete
 			// 
 			this.label_delete.AutoSize = true;
-			this.label_delete.Location = new System.Drawing.Point(574, 137);
+			this.label_delete.Location = new System.Drawing.Point(218, 175);
 			this.label_delete.Name = "label_delete";
 			this.label_delete.Size = new System.Drawing.Size(0, 18);
 			this.label_delete.TabIndex = 28;
@@ -469,7 +588,7 @@ namespace MedicalTest
 			// button_del
 			// 
 			this.button_del.Font = new System.Drawing.Font("JetBrains Mono", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_del.Location = new System.Drawing.Point(486, 197);
+			this.button_del.Location = new System.Drawing.Point(130, 235);
 			this.button_del.Name = "button_del";
 			this.button_del.Size = new System.Drawing.Size(300, 250);
 			this.button_del.TabIndex = 27;
@@ -480,7 +599,7 @@ namespace MedicalTest
 			// label12
 			// 
 			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(430, 66);
+			this.label12.Location = new System.Drawing.Point(74, 104);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(96, 18);
 			this.label12.TabIndex = 26;
@@ -488,7 +607,7 @@ namespace MedicalTest
 			// 
 			// textBox_id_del
 			// 
-			this.textBox_id_del.Location = new System.Drawing.Point(574, 63);
+			this.textBox_id_del.Location = new System.Drawing.Point(218, 101);
 			this.textBox_id_del.Name = "textBox_id_del";
 			this.textBox_id_del.Size = new System.Drawing.Size(200, 25);
 			this.textBox_id_del.TabIndex = 25;
@@ -496,6 +615,7 @@ namespace MedicalTest
 			// 
 			// tabPage5
 			// 
+			this.tabPage5.Controls.Add(this.label_test_pat_status);
 			this.tabPage5.Controls.Add(this.button_add_test);
 			this.tabPage5.Controls.Add(this.checkBox_css);
 			this.tabPage5.Controls.Add(this.checkBox_resist);
@@ -504,8 +624,8 @@ namespace MedicalTest
 			this.tabPage5.Controls.Add(this.checkBox_blood_pr);
 			this.tabPage5.Controls.Add(this.label16);
 			this.tabPage5.Controls.Add(this.label15);
-			this.tabPage5.Controls.Add(this.comboBox1);
-			this.tabPage5.Controls.Add(this.numericUpDown1);
+			this.tabPage5.Controls.Add(this.comboBox_activity);
+			this.tabPage5.Controls.Add(this.numericUpDown_time);
 			this.tabPage5.Controls.Add(this.label14);
 			this.tabPage5.Controls.Add(this.label13);
 			this.tabPage5.Controls.Add(this.textBox_id_nazn);
@@ -516,14 +636,25 @@ namespace MedicalTest
 			this.tabPage5.Text = "Назначить обследование";
 			this.tabPage5.UseVisualStyleBackColor = true;
 			// 
+			// label_test_pat_status
+			// 
+			this.label_test_pat_status.AutoSize = true;
+			this.label_test_pat_status.Location = new System.Drawing.Point(666, 39);
+			this.label_test_pat_status.Name = "label_test_pat_status";
+			this.label_test_pat_status.Size = new System.Drawing.Size(0, 18);
+			this.label_test_pat_status.TabIndex = 40;
+			this.label_test_pat_status.Visible = false;
+			// 
 			// button_add_test
 			// 
-			this.button_add_test.Location = new System.Drawing.Point(66, 463);
+			this.button_add_test.Font = new System.Drawing.Font("JetBrains Mono", 16.2F);
+			this.button_add_test.Location = new System.Drawing.Point(666, 96);
 			this.button_add_test.Name = "button_add_test";
-			this.button_add_test.Size = new System.Drawing.Size(150, 29);
+			this.button_add_test.Size = new System.Drawing.Size(414, 151);
 			this.button_add_test.TabIndex = 3;
 			this.button_add_test.Text = "Назначить";
 			this.button_add_test.UseVisualStyleBackColor = true;
+			this.button_add_test.Click += new System.EventHandler(this.button_add_test_Click);
 			// 
 			// checkBox_css
 			// 
@@ -593,41 +724,42 @@ namespace MedicalTest
 			this.label15.TabIndex = 33;
 			this.label15.Text = "Тип нагрузки";
 			// 
-			// comboBox1
+			// comboBox_activity
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
-            "Бег",
-            "Ходьба",
-            "Плаванье",
-            "Велосипед"});
-			this.comboBox1.Location = new System.Drawing.Point(262, 165);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(200, 25);
-			this.comboBox1.TabIndex = 32;
+			this.comboBox_activity.FormattingEnabled = true;
+			this.comboBox_activity.Items.AddRange(new object[] {
+            "Running",
+            "Walking",
+            "Swimming",
+            "Сycling"});
+			this.comboBox_activity.Location = new System.Drawing.Point(262, 165);
+			this.comboBox_activity.Name = "comboBox_activity";
+			this.comboBox_activity.Size = new System.Drawing.Size(200, 25);
+			this.comboBox_activity.TabIndex = 32;
+			this.comboBox_activity.Text = "Running";
 			// 
-			// numericUpDown1
+			// numericUpDown_time
 			// 
-			this.numericUpDown1.Increment = new decimal(new int[] {
+			this.numericUpDown_time.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-			this.numericUpDown1.Location = new System.Drawing.Point(262, 100);
-			this.numericUpDown1.Maximum = new decimal(new int[] {
+			this.numericUpDown_time.Location = new System.Drawing.Point(262, 100);
+			this.numericUpDown_time.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-			this.numericUpDown1.Minimum = new decimal(new int[] {
+			this.numericUpDown_time.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(200, 25);
-			this.numericUpDown1.TabIndex = 31;
-			this.numericUpDown1.Value = new decimal(new int[] {
+			this.numericUpDown_time.Name = "numericUpDown_time";
+			this.numericUpDown_time.Size = new System.Drawing.Size(200, 25);
+			this.numericUpDown_time.TabIndex = 31;
+			this.numericUpDown_time.Value = new decimal(new int[] {
             5,
             0,
             0,
@@ -657,6 +789,7 @@ namespace MedicalTest
 			this.textBox_id_nazn.Name = "textBox_id_nazn";
 			this.textBox_id_nazn.Size = new System.Drawing.Size(200, 25);
 			this.textBox_id_nazn.TabIndex = 27;
+			this.textBox_id_nazn.Text = "0";
 			// 
 			// button_back
 			// 
@@ -706,7 +839,7 @@ namespace MedicalTest
 			this.tabPage4.PerformLayout();
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage5.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_time)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -754,7 +887,7 @@ namespace MedicalTest
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.TextBox textBox_id_nazn;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown numericUpDown_time;
 		private System.Windows.Forms.Button button_add_test;
 		private System.Windows.Forms.CheckBox checkBox_css;
 		private System.Windows.Forms.CheckBox checkBox_resist;
@@ -763,9 +896,21 @@ namespace MedicalTest
 		private System.Windows.Forms.CheckBox checkBox_blood_pr;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox comboBox_activity;
 		private System.Windows.Forms.Label label_status_add;
 		private System.Windows.Forms.Label label_update_status;
 		private System.Windows.Forms.Label label_delete;
+		private System.Windows.Forms.Button button_view_del;
+		private System.Windows.Forms.Label label_sex;
+		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.Label label_dad;
+		private System.Windows.Forms.Label label21;
+		private System.Windows.Forms.Label label_name;
+		private System.Windows.Forms.Label label19;
+		private System.Windows.Forms.Label label_familia;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label label_age;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.Label label_test_pat_status;
 	}
 }

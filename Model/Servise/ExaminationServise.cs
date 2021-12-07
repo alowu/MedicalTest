@@ -7,12 +7,25 @@ using System.Threading.Tasks;
 
 namespace Model.Servise
 {
-	class ExaminationServise : IExaminationServise
+	public class ExaminationServise : IExaminationServise
 	{
 		private ExaminationRepository _examinationRepository;
+
+		public ExaminationServise()
+		{
+			_examinationRepository = new ExaminationRepository();
+		}
 		public bool Create(Examination item)
 		{
-			return _examinationRepository.Create(item);
+			bool isSelected = isSelectedAtLeastOne(item);
+			if (isSelected)
+			{
+				return _examinationRepository.Create(item);
+			}
+			else
+			{
+				return isSelected;
+			}			
 		}
 
 		public bool Delete(int id)
@@ -28,6 +41,15 @@ namespace Model.Servise
 		public bool Update(Examination item)
 		{
 			return _examinationRepository.Update(item);
+		}
+
+		private bool isSelectedAtLeastOne(Examination item)
+		{
+			return	item.stateChss		||
+					item.stateHumidity	||
+					item.statePresure	||
+					item.stateResist	||
+					item.stateTemperature;
 		}
 	}
 }

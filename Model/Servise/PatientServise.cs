@@ -76,7 +76,7 @@ namespace Model.Servise
 
 		public Patient GetPatient(int Id)
 		{
-			throw new NotImplementedException();
+			return _patientRepository.GetT(Id);
 		}
 
 		public bool isPatient(int Id)

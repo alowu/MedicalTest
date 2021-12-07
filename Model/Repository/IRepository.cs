@@ -10,6 +10,7 @@ namespace Model
 	{
 		List<T> GetAll();
 		T FindById(int Id);
+		T GetT(int Id);
 		bool Create(T item);
 		bool Update(T item);
 		bool Delete(int id);

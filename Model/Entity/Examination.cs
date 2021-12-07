@@ -8,6 +8,18 @@ namespace Model.Entity
 {
 	public class Examination
 	{
+		public Examination(int patientId, TypePhysicalActive physicalActive, int timeActive, bool statePresure, bool stateTemperature, bool stateHumidity, bool stateResist, bool stateChss)
+		{
+			this.patientId = patientId;
+			this.physicalActive = physicalActive;
+			this.timeActive = timeActive;
+			this.statePresure = statePresure;
+			this.stateTemperature = stateTemperature;
+			this.stateHumidity = stateHumidity;
+			this.stateResist = stateResist;
+			this.stateChss = stateChss;
+		}
+
 		public int id
 		{
 			get;

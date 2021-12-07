@@ -68,6 +68,11 @@ namespace MedicalTest
 				label_status_add.Text = "Пациент добавлен!";
 				label_status_add.Visible = true;
 				label_status_add.ForeColor = Color.Green;
+
+				textBox_surname.Text = string.Empty;
+				textBox_name.Text = string.Empty;
+				textBox_dad_name.Text = string.Empty;
+				numericUpDown_age.Value = 18;
 			}
 			else
 			{
@@ -137,6 +142,105 @@ namespace MedicalTest
 				label_delete.Text = "Пациент не найден";
 				label_delete.Visible = true;
 				label_delete.ForeColor = Color.Red;
+			}
+		}
+
+		private void button_view_del_Click(object sender, EventArgs e)
+		{
+			int id = int.Parse(textBox_id_del.Text);
+
+			Patient patient = presenter.GetPatient(id);
+
+			if (patient == null)
+			{
+				label_delete.Text = "Пациент не найден";
+				label_delete.Visible = true;
+				label_delete.ForeColor = Color.Red;
+			}
+			else
+			{
+				label_delete.Text = "Пациент найден!";
+				label_delete.Visible = true;
+				label_delete.ForeColor = Color.Indigo;
+
+				label_familia.Text = patient.firstName;
+				label_name.Text = patient.middleName;
+				label_dad.Text = patient.lastName;
+				label_sex.Text = patient.sex.ToString();
+				label_age.Text = patient.age.ToString();
+			}
+		}
+
+		private void button_add_test_Click(object sender, EventArgs e)
+		{
+			label_test_pat_status.Visible = false;
+
+			int id = int.Parse(textBox_id_nazn.Text);
+
+			Patient patient = presenter.GetPatient(id);
+
+			if (patient == null)
+			{
+				label_test_pat_status.Text = "Пациент не найден";
+				label_test_pat_status.Visible = true;
+				label_test_pat_status.ForeColor = Color.Red;
+			}
+			else
+			{
+				if (patient.hasExam)
+				{
+					label_test_pat_status.Text = "Обследование уже назначено!";
+					label_test_pat_status.Visible = true;
+					label_test_pat_status.ForeColor = Color.Indigo;
+				}
+				else
+				{
+					int time = (int)numericUpDown_time.Value;
+					TypePhysicalActive active = 0;
+					switch (comboBox_activity.SelectedIndex)
+					{
+						case 0:
+							{
+								active = TypePhysicalActive.Running;
+								break;
+							}
+						case 1:
+							{
+								active = TypePhysicalActive.Walking;
+								break;
+							}
+						case 2:
+							{
+								active = TypePhysicalActive.Swimming;
+								break;
+							}
+						case 3:
+							{
+								active = TypePhysicalActive.Сycling;
+								break;
+							}
+					}
+					bool css_state = checkBox_css.Checked;
+					bool humidity_state = checkBox_vlazh.Checked;
+					bool temp_state = checkBox_temp.Checked;
+					bool resist_state = checkBox_resist.Checked;
+					bool presure_state = checkBox_blood_pr.Checked;
+
+					Examination examination = new Examination(id, active, time, presure_state, temp_state, humidity_state, resist_state, css_state);
+
+					if (presenter.Add(examination))
+					{
+						label_test_pat_status.Text = "Обследование назначено";
+						label_test_pat_status.Visible = true;
+						label_test_pat_status.ForeColor = Color.Green;
+					}
+					else
+					{
+						label_test_pat_status.Text = "Проверьте настройки обследования";
+						label_test_pat_status.Visible = true;
+						label_test_pat_status.ForeColor = Color.Red;
+					}
+				}		
 			}
 		}
 	}

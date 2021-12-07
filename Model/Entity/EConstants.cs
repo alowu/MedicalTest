@@ -15,17 +15,17 @@ namespace Model.Entity
 
 	public enum TypePhysicalActive
 	{
-		Running = 0,
-		Walking = 1,
-		Swimming = 2,
-		Сycling = 3
+		Running,
+		Walking,
+		Swimming,
+		Сycling
 	}
 
 	public enum SensorState
 	{ 
-		NotActive = 0,
-		Busy = 1,
-		Ready = 2
+		NotActive,
+		Busy,
+		Ready
 	}
 
 	//TODO add others constant enums
