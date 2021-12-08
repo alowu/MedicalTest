@@ -53,6 +53,7 @@ namespace MedicalTest
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox_id = new System.Windows.Forms.TextBox();
 			this.button_back = new System.Windows.Forms.Button();
+			this.button_update = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -318,11 +319,23 @@ namespace MedicalTest
 			this.button_back.UseVisualStyleBackColor = true;
 			this.button_back.Click += new System.EventHandler(this.button_back_Click);
 			// 
+			// button_update
+			// 
+			this.button_update.Font = new System.Drawing.Font("JetBrains Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button_update.Location = new System.Drawing.Point(168, 679);
+			this.button_update.Name = "button_update";
+			this.button_update.Size = new System.Drawing.Size(150, 29);
+			this.button_update.TabIndex = 3;
+			this.button_update.Text = "Обновить";
+			this.button_update.UseVisualStyleBackColor = true;
+			this.button_update.Click += new System.EventHandler(this.button_update_Click);
+			// 
 			// DoctorScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1280, 720);
+			this.Controls.Add(this.button_update);
 			this.Controls.Add(this.button_back);
 			this.Controls.Add(this.tabControl1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -365,5 +378,6 @@ namespace MedicalTest
 		private System.Windows.Forms.Button button_show;
 		private System.Windows.Forms.Label label_first_name_st;
 		private System.Windows.Forms.Label label_common_state;
+		private System.Windows.Forms.Button button_update;
 	}
 }

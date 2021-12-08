@@ -64,7 +64,24 @@ namespace Model
 
 		public bool Delete(int id)
 		{
-			throw new NotImplementedException();
+			bool result = false;
+
+			try
+			{
+				sqlCommand = new SqlCommand("DELETE FROM [Examinations] WHERE [patientId]=@id", DB._getConnection());
+
+				sqlCommand.Parameters.AddWithValue("id", id);
+
+				sqlCommand.ExecuteNonQuery();
+
+				result = true;
+			}
+			catch (Exception ex)
+			{
+				Console.Error.WriteLine("Can't DELETE Examination!\n" + ex.ToString());
+			}
+
+			return result;
 		}
 
 		public bool Update(Examination item)

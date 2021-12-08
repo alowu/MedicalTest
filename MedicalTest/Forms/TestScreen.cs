@@ -45,17 +45,25 @@ namespace MedicalTest
 
 		private void button_start_Click(object sender, EventArgs e)
 		{
-			if (state && check)
+			label_state.ForeColor = Color.Red;
+			if (state)
 			{
-				GraphicsScreen graphicsScreen = new GraphicsScreen(patient, examination);
-				if (graphicsScreen.ShowDialog() == DialogResult.Cancel)
+				if (check)
 				{
-					this.Close();
+					GraphicsScreen graphicsScreen = new GraphicsScreen(patient, examination);
+					if (graphicsScreen.ShowDialog() == DialogResult.Cancel)
+					{
+						this.Close();
+					}
 				}
+				else
+				{
+					label_state.Text = "Не активированы датчики";
+				}				
 			}
 			else
 			{
-				label_state.Text = "Не установлены и/или не активированы датчики";
+				label_state.Text = "Не установлены датчики";
 			}
 		}
 

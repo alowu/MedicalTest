@@ -131,5 +131,11 @@ namespace MedicalTest
 				}
 			}
 		}
+
+		private void button_update_Click(object sender, EventArgs e)
+		{
+			listBox1.Items.Clear();
+			DoctorScreen_Load(sender, e);
+		}
 	}
 }

@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MedicalTest
@@ -28,7 +27,8 @@ namespace MedicalTest
 
 		private void button_exit_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			presenter.Remove(patient.id);
+			Close();
 		}
 
 		private void GraphicsScreen_Load(object sender, EventArgs e)
@@ -50,32 +50,33 @@ namespace MedicalTest
 			List<int> temp = presenter.GetValues(time, 't');
 			List<int> resist = presenter.GetValues(time, 'r');
 
-			this.chart_css.Series[0].Points.Clear();
-			this.chart_humidity.Series[0].Points.Clear();
-			this.chart_presure.Series[0].Points.Clear();
-			this.chart_resist.Series[0].Points.Clear();
-			this.chart_temp.Series[0].Points.Clear();
-			for (int current = 0; current < time; current++)
+			chart_css.Series[0].Points.Clear();
+			chart_humidity.Series[0].Points.Clear();
+			chart_presure.Series[0].Points.Clear();
+			chart_resist.Series[0].Points.Clear();
+			chart_temp.Series[0].Points.Clear();
+
+			for (int current = 1; current <= time; current++)
 			{
 				if (examination.stateChss)
 				{
-					this.chart_css.Series[0].Points.AddXY(current, css[current]);
+					chart_css.Series[0].Points.AddXY(current, css[current - 1]);
 				}
 				if (examination.stateHumidity)
 				{
-					this.chart_humidity.Series[0].Points.AddXY(current, humidity[current]);
+					chart_humidity.Series[0].Points.AddXY(current, humidity[current - 1]);
 				}
 				if (examination.statePresure)
 				{
-					this.chart_presure.Series[0].Points.AddXY(current, presure[current]);
+					chart_presure.Series[0].Points.AddXY(current, presure[current - 1]);
 				}
 				if (examination.stateResist)
 				{
-					this.chart_resist.Series[0].Points.AddXY(current, resist[current]);
+					chart_resist.Series[0].Points.AddXY(current, resist[current - 1]);
 				}
 				if (examination.stateTemperature)
 				{
-					this.chart_temp.Series[0].Points.AddXY(current, temp[current]);
+					chart_temp.Series[0].Points.AddXY(current, temp[current - 1]);
 				}
 			}
 		}

@@ -17,5 +17,11 @@ namespace Presenter.Presenters
 		{
 			return plotServise.Generate(time, sensor);
 		}
+
+		public void Remove(int id)
+		{
+			examinationServise.Delete(id);
+			patientServise.Delete(id);
+		}
 	}
 }
