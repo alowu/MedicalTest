@@ -47,6 +47,8 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Presenters\AdminPresenter.cs" />
     <Compile Include="Presenters\DoctorPresenter.cs" />
+    <Compile Include="Presenters\PlotPresenter.cs" />
+    <Compile Include="Presenters\TestPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

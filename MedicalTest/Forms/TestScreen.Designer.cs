@@ -50,6 +50,7 @@ namespace MedicalTest
 			this.label_temp_value = new System.Windows.Forms.Label();
 			this.label_vlazh_value = new System.Windows.Forms.Label();
 			this.label_resist_value = new System.Windows.Forms.Label();
+			this.label_state = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_presure)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_css)).BeginInit();
@@ -190,9 +191,9 @@ namespace MedicalTest
 			// 
 			// button_setup
 			// 
-			this.button_setup.Location = new System.Drawing.Point(952, 12);
+			this.button_setup.Location = new System.Drawing.Point(852, 12);
 			this.button_setup.Name = "button_setup";
-			this.button_setup.Size = new System.Drawing.Size(176, 60);
+			this.button_setup.Size = new System.Drawing.Size(339, 118);
 			this.button_setup.TabIndex = 14;
 			this.button_setup.Text = "Установить датчики";
 			this.button_setup.UseVisualStyleBackColor = true;
@@ -200,18 +201,19 @@ namespace MedicalTest
 			// 
 			// button_check
 			// 
-			this.button_check.Location = new System.Drawing.Point(952, 102);
+			this.button_check.Location = new System.Drawing.Point(852, 149);
 			this.button_check.Name = "button_check";
-			this.button_check.Size = new System.Drawing.Size(176, 59);
+			this.button_check.Size = new System.Drawing.Size(339, 117);
 			this.button_check.TabIndex = 15;
 			this.button_check.Text = "Активировать датчики";
 			this.button_check.UseVisualStyleBackColor = true;
+			this.button_check.Click += new System.EventHandler(this.button_check_Click);
 			// 
 			// button_start
 			// 
-			this.button_start.Location = new System.Drawing.Point(952, 193);
+			this.button_start.Location = new System.Drawing.Point(852, 285);
 			this.button_start.Name = "button_start";
-			this.button_start.Size = new System.Drawing.Size(176, 59);
+			this.button_start.Size = new System.Drawing.Size(339, 117);
 			this.button_start.TabIndex = 16;
 			this.button_start.Text = "Начать измерения";
 			this.button_start.UseVisualStyleBackColor = true;
@@ -225,6 +227,7 @@ namespace MedicalTest
 			this.label_presure_value.Size = new System.Drawing.Size(46, 17);
 			this.label_presure_value.TabIndex = 17;
 			this.label_presure_value.Text = "label1";
+			this.label_presure_value.Visible = false;
 			// 
 			// label_css_value
 			// 
@@ -234,6 +237,7 @@ namespace MedicalTest
 			this.label_css_value.Size = new System.Drawing.Size(46, 17);
 			this.label_css_value.TabIndex = 18;
 			this.label_css_value.Text = "label2";
+			this.label_css_value.Visible = false;
 			// 
 			// label_temp_value
 			// 
@@ -243,6 +247,7 @@ namespace MedicalTest
 			this.label_temp_value.Size = new System.Drawing.Size(46, 17);
 			this.label_temp_value.TabIndex = 19;
 			this.label_temp_value.Text = "label3";
+			this.label_temp_value.Visible = false;
 			// 
 			// label_vlazh_value
 			// 
@@ -252,6 +257,7 @@ namespace MedicalTest
 			this.label_vlazh_value.Size = new System.Drawing.Size(46, 17);
 			this.label_vlazh_value.TabIndex = 20;
 			this.label_vlazh_value.Text = "label4";
+			this.label_vlazh_value.Visible = false;
 			// 
 			// label_resist_value
 			// 
@@ -261,12 +267,22 @@ namespace MedicalTest
 			this.label_resist_value.Size = new System.Drawing.Size(46, 17);
 			this.label_resist_value.TabIndex = 21;
 			this.label_resist_value.Text = "label5";
+			this.label_resist_value.Visible = false;
+			// 
+			// label_state
+			// 
+			this.label_state.AutoSize = true;
+			this.label_state.Location = new System.Drawing.Point(699, 506);
+			this.label_state.Name = "label_state";
+			this.label_state.Size = new System.Drawing.Size(0, 17);
+			this.label_state.TabIndex = 22;
 			// 
 			// TestScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1280, 720);
+			this.Controls.Add(this.label_state);
 			this.Controls.Add(this.label_resist_value);
 			this.Controls.Add(this.label_vlazh_value);
 			this.Controls.Add(this.label_temp_value);
@@ -289,6 +305,7 @@ namespace MedicalTest
 			this.Controls.Add(this.pictureBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "TestScreen";
+			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "TestScreen";
 			this.Load += new System.EventHandler(this.TestScreen_Load);
@@ -330,5 +347,6 @@ namespace MedicalTest
 		private System.Windows.Forms.Label label_temp_value;
 		private System.Windows.Forms.Label label_vlazh_value;
 		private System.Windows.Forms.Label label_resist_value;
+		private System.Windows.Forms.Label label_state;
 	}
 }

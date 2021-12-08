@@ -16,6 +16,8 @@ namespace MedicalTest
 	public partial class DoctorScreen : Form
 	{
 		DoctorPresenter presenter = new DoctorPresenter();
+		private bool flag = false;
+		private int patid;
 		public DoctorScreen()
 		{
 			InitializeComponent();
@@ -28,8 +30,18 @@ namespace MedicalTest
 
 		private void button_start_exam_Click(object sender, EventArgs e)
 		{
-			TestScreen testScreen = new TestScreen();
-			testScreen.ShowDialog();
+			if (flag)
+			{
+				TestScreen testScreen = new TestScreen(patid);
+				testScreen.ShowDialog();
+			}
+			else
+			{
+				label_common_state.Text = "Пациент не найден";
+				label_common_state.Visible = true;
+				label_common_state.ForeColor = Color.Red;
+			}
+			
 		}
 
 		private void DoctorScreen_Load(object sender, EventArgs e)
@@ -44,6 +56,8 @@ namespace MedicalTest
 
 		private void button_show_Click(object sender, EventArgs e)
 		{
+			flag = false;
+
 			label_first_name_st.Visible = false;
 			label_first_name.Visible = false;
 			label_middle_name_st.Visible = false;
@@ -111,6 +125,9 @@ namespace MedicalTest
 					label_time_st.Visible = true;
 					label_time.Text = examination.timeActive.ToString() + " mins";
 					label_time.Visible = true;
+
+					patid = examination.patientId;
+					flag = true;
 				}
 			}
 		}

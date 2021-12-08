@@ -29,21 +29,21 @@ namespace MedicalTest
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title10 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label_surname = new System.Windows.Forms.Label();
 			this.label_name = new System.Windows.Forms.Label();
@@ -52,22 +52,20 @@ namespace MedicalTest
 			this.label_age = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label_sex = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label_date = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label_type = new System.Windows.Forms.Label();
 			this.label_time = new System.Windows.Forms.Label();
-			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chart_presure = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.button_exit = new System.Windows.Forms.Button();
-			this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+			this.chart_css = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chart_temp = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chart_humidity = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chart_resist = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			((System.ComponentModel.ISupportInitialize)(this.chart_presure)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_css)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_temp)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_humidity)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_resist)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -142,24 +140,6 @@ namespace MedicalTest
 			this.label_sex.TabIndex = 7;
 			this.label_sex.Text = "Пол";
 			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(12, 116);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(125, 17);
-			this.label4.TabIndex = 8;
-			this.label4.Text = "Дата назначения";
-			// 
-			// label_date
-			// 
-			this.label_date.AutoSize = true;
-			this.label_date.Location = new System.Drawing.Point(187, 116);
-			this.label_date.Name = "label_date";
-			this.label_date.Size = new System.Drawing.Size(42, 17);
-			this.label_date.TabIndex = 9;
-			this.label_date.Text = "Дата";
-			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
@@ -181,34 +161,34 @@ namespace MedicalTest
 			// label_time
 			// 
 			this.label_time.AutoSize = true;
-			this.label_time.Location = new System.Drawing.Point(1037, 41);
+			this.label_time.Location = new System.Drawing.Point(865, 41);
 			this.label_time.Name = "label_time";
 			this.label_time.Size = new System.Drawing.Size(50, 17);
 			this.label_time.TabIndex = 12;
 			this.label_time.Text = "Время";
 			// 
-			// chart1
+			// chart_presure
 			// 
-			chartArea1.AxisX.Title = "Время";
-			chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			chartArea1.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea1);
-			this.chart1.Location = new System.Drawing.Point(25, 150);
-			this.chart1.Name = "chart1";
-			series1.BorderWidth = 3;
-			series1.ChartArea = "ChartArea1";
-			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-			series1.Color = System.Drawing.Color.Blue;
-			series1.Legend = "Legend1";
-			series1.Name = "Series1";
-			this.chart1.Series.Add(series1);
-			this.chart1.Size = new System.Drawing.Size(1250, 600);
-			this.chart1.TabIndex = 13;
-			this.chart1.Text = "chart1";
-			title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			title1.Name = "Title1";
-			title1.Text = "Кровяное давление";
-			this.chart1.Titles.Add(title1);
+			chartArea6.AxisX.Title = "Время";
+			chartArea6.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			chartArea6.Name = "ChartArea1";
+			this.chart_presure.ChartAreas.Add(chartArea6);
+			this.chart_presure.Location = new System.Drawing.Point(25, 150);
+			this.chart_presure.Name = "chart_presure";
+			series6.BorderWidth = 3;
+			series6.ChartArea = "ChartArea1";
+			series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series6.Color = System.Drawing.Color.Blue;
+			series6.Legend = "Legend1";
+			series6.Name = "Series1";
+			this.chart_presure.Series.Add(series6);
+			this.chart_presure.Size = new System.Drawing.Size(1250, 600);
+			this.chart_presure.TabIndex = 13;
+			this.chart_presure.Text = "chart1";
+			title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			title6.Name = "Title1";
+			title6.Text = "Кровяное давление";
+			this.chart_presure.Titles.Add(title6);
 			// 
 			// button_exit
 			// 
@@ -220,115 +200,113 @@ namespace MedicalTest
 			this.button_exit.UseVisualStyleBackColor = true;
 			this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
 			// 
-			// chart2
+			// chart_css
 			// 
-			chartArea2.AxisX.Title = "Время";
-			chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			chartArea2.Name = "ChartArea1";
-			this.chart2.ChartAreas.Add(chartArea2);
-			this.chart2.Location = new System.Drawing.Point(25, 800);
-			this.chart2.Name = "chart2";
-			series2.BorderWidth = 3;
-			series2.ChartArea = "ChartArea1";
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-			series2.Color = System.Drawing.Color.Blue;
-			series2.Legend = "Legend1";
-			series2.Name = "Series1";
-			this.chart2.Series.Add(series2);
-			this.chart2.Size = new System.Drawing.Size(1250, 600);
-			this.chart2.TabIndex = 23;
-			this.chart2.Text = "chart2";
-			title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			title2.Name = "Title1";
-			title2.Text = "Кровяное давление";
-			this.chart2.Titles.Add(title2);
+			chartArea7.AxisX.Title = "Время";
+			chartArea7.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			chartArea7.Name = "ChartArea1";
+			this.chart_css.ChartAreas.Add(chartArea7);
+			this.chart_css.Location = new System.Drawing.Point(25, 800);
+			this.chart_css.Name = "chart_css";
+			series7.BorderWidth = 3;
+			series7.ChartArea = "ChartArea1";
+			series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series7.Color = System.Drawing.Color.Blue;
+			series7.Legend = "Legend1";
+			series7.Name = "Series1";
+			this.chart_css.Series.Add(series7);
+			this.chart_css.Size = new System.Drawing.Size(1250, 600);
+			this.chart_css.TabIndex = 23;
+			this.chart_css.Text = "chart2";
+			title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			title7.Name = "Title1";
+			title7.Text = "Частота сердечных сокращений";
+			this.chart_css.Titles.Add(title7);
 			// 
-			// chart3
+			// chart_temp
 			// 
-			chartArea3.AxisX.Title = "Время";
-			chartArea3.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			chartArea3.Name = "ChartArea1";
-			this.chart3.ChartAreas.Add(chartArea3);
-			this.chart3.Location = new System.Drawing.Point(25, 1450);
-			this.chart3.Name = "chart3";
-			series3.BorderWidth = 3;
-			series3.ChartArea = "ChartArea1";
-			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-			series3.Color = System.Drawing.Color.Blue;
-			series3.Legend = "Legend1";
-			series3.Name = "Series1";
-			this.chart3.Series.Add(series3);
-			this.chart3.Size = new System.Drawing.Size(1250, 600);
-			this.chart3.TabIndex = 24;
-			this.chart3.Text = "chart3";
-			title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			title3.Name = "Title1";
-			title3.Text = "Кровяное давление";
-			this.chart3.Titles.Add(title3);
+			chartArea8.AxisX.Title = "Время";
+			chartArea8.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			chartArea8.Name = "ChartArea1";
+			this.chart_temp.ChartAreas.Add(chartArea8);
+			this.chart_temp.Location = new System.Drawing.Point(25, 1450);
+			this.chart_temp.Name = "chart_temp";
+			series8.BorderWidth = 3;
+			series8.ChartArea = "ChartArea1";
+			series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series8.Color = System.Drawing.Color.Blue;
+			series8.Legend = "Legend1";
+			series8.Name = "Series1";
+			this.chart_temp.Series.Add(series8);
+			this.chart_temp.Size = new System.Drawing.Size(1250, 600);
+			this.chart_temp.TabIndex = 24;
+			this.chart_temp.Text = "chart3";
+			title8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			title8.Name = "Title1";
+			title8.Text = "Температура";
+			this.chart_temp.Titles.Add(title8);
 			// 
-			// chart4
+			// chart_humidity
 			// 
-			chartArea4.AxisX.Title = "Время";
-			chartArea4.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			chartArea4.Name = "ChartArea1";
-			this.chart4.ChartAreas.Add(chartArea4);
-			this.chart4.Location = new System.Drawing.Point(25, 2100);
-			this.chart4.Name = "chart4";
-			series4.BorderWidth = 3;
-			series4.ChartArea = "ChartArea1";
-			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-			series4.Color = System.Drawing.Color.Blue;
-			series4.Legend = "Legend1";
-			series4.Name = "Series1";
-			this.chart4.Series.Add(series4);
-			this.chart4.Size = new System.Drawing.Size(1250, 600);
-			this.chart4.TabIndex = 25;
-			this.chart4.Text = "chart4";
-			title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			title4.Name = "Title1";
-			title4.Text = "Кровяное давление";
-			this.chart4.Titles.Add(title4);
+			chartArea9.AxisX.Title = "Время";
+			chartArea9.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			chartArea9.Name = "ChartArea1";
+			this.chart_humidity.ChartAreas.Add(chartArea9);
+			this.chart_humidity.Location = new System.Drawing.Point(25, 2100);
+			this.chart_humidity.Name = "chart_humidity";
+			series9.BorderWidth = 3;
+			series9.ChartArea = "ChartArea1";
+			series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series9.Color = System.Drawing.Color.Blue;
+			series9.Legend = "Legend1";
+			series9.Name = "Series1";
+			this.chart_humidity.Series.Add(series9);
+			this.chart_humidity.Size = new System.Drawing.Size(1250, 600);
+			this.chart_humidity.TabIndex = 25;
+			this.chart_humidity.Text = "chart4";
+			title9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			title9.Name = "Title1";
+			title9.Text = "Влажность кожи";
+			this.chart_humidity.Titles.Add(title9);
 			// 
-			// chart5
+			// chart_resist
 			// 
-			chartArea5.AxisX.Title = "Время";
-			chartArea5.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			chartArea5.Name = "ChartArea1";
-			this.chart5.ChartAreas.Add(chartArea5);
-			this.chart5.Location = new System.Drawing.Point(25, 2750);
-			this.chart5.Name = "chart5";
-			series5.BorderWidth = 3;
-			series5.ChartArea = "ChartArea1";
-			series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-			series5.Color = System.Drawing.Color.Blue;
-			series5.Legend = "Legend1";
-			series5.Name = "Series1";
-			this.chart5.Series.Add(series5);
-			this.chart5.Size = new System.Drawing.Size(1250, 600);
-			this.chart5.TabIndex = 26;
-			this.chart5.Text = "chart5";
-			title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			title5.Name = "Title1";
-			title5.Text = "Кровяное давление";
-			this.chart5.Titles.Add(title5);
+			chartArea10.AxisX.Title = "Время";
+			chartArea10.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			chartArea10.Name = "ChartArea1";
+			this.chart_resist.ChartAreas.Add(chartArea10);
+			this.chart_resist.Location = new System.Drawing.Point(25, 2750);
+			this.chart_resist.Name = "chart_resist";
+			series10.BorderWidth = 3;
+			series10.ChartArea = "ChartArea1";
+			series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series10.Color = System.Drawing.Color.Blue;
+			series10.Legend = "Legend1";
+			series10.Name = "Series1";
+			this.chart_resist.Series.Add(series10);
+			this.chart_resist.Size = new System.Drawing.Size(1250, 600);
+			this.chart_resist.TabIndex = 26;
+			this.chart_resist.Text = "chart5";
+			title10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			title10.Name = "Title1";
+			title10.Text = "Проводимость кожи";
+			this.chart_resist.Titles.Add(title10);
 			// 
 			// GraphicsScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
-			this.ClientSize = new System.Drawing.Size(1322, 720);
-			this.Controls.Add(this.chart5);
-			this.Controls.Add(this.chart4);
-			this.Controls.Add(this.chart3);
-			this.Controls.Add(this.chart2);
+			this.ClientSize = new System.Drawing.Size(1343, 720);
+			this.Controls.Add(this.chart_resist);
+			this.Controls.Add(this.chart_humidity);
+			this.Controls.Add(this.chart_temp);
+			this.Controls.Add(this.chart_css);
 			this.Controls.Add(this.button_exit);
-			this.Controls.Add(this.chart1);
+			this.Controls.Add(this.chart_presure);
 			this.Controls.Add(this.label_time);
 			this.Controls.Add(this.label_type);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.label_date);
-			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label_sex);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label_age);
@@ -339,14 +317,15 @@ namespace MedicalTest
 			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "GraphicsScreen";
+			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "  ";
 			this.Load += new System.EventHandler(this.GraphicsScreen_Load);
-			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_presure)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_css)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_temp)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_humidity)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart_resist)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -362,16 +341,14 @@ namespace MedicalTest
 		private System.Windows.Forms.Label label_age;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label_sex;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label_date;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label_type;
 		private System.Windows.Forms.Label label_time;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart_presure;
 		private System.Windows.Forms.Button button_exit;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart_css;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart_temp;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart_humidity;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart_resist;
 	}
 }

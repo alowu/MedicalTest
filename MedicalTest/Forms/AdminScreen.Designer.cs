@@ -95,6 +95,7 @@ namespace MedicalTest
 			this.textBox_id_nazn = new System.Windows.Forms.TextBox();
 			this.button_back = new System.Windows.Forms.Button();
 			this.button_update = new System.Windows.Forms.Button();
+			this.button_show_one = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -292,6 +293,7 @@ namespace MedicalTest
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.button_show_one);
 			this.tabPage3.Controls.Add(this.label_update_status);
 			this.tabPage3.Controls.Add(this.button_change);
 			this.tabPage3.Controls.Add(this.label11);
@@ -317,7 +319,7 @@ namespace MedicalTest
 			// label_update_status
 			// 
 			this.label_update_status.AutoSize = true;
-			this.label_update_status.Location = new System.Drawing.Point(507, 158);
+			this.label_update_status.Location = new System.Drawing.Point(190, 139);
 			this.label_update_status.Name = "label_update_status";
 			this.label_update_status.Size = new System.Drawing.Size(0, 18);
 			this.label_update_status.TabIndex = 25;
@@ -813,6 +815,17 @@ namespace MedicalTest
 			this.button_update.UseVisualStyleBackColor = true;
 			this.button_update.Click += new System.EventHandler(this.button_update_Click);
 			// 
+			// button_show_one
+			// 
+			this.button_show_one.Font = new System.Drawing.Font("JetBrains Mono", 16.2F);
+			this.button_show_one.Location = new System.Drawing.Point(513, 139);
+			this.button_show_one.Name = "button_show_one";
+			this.button_show_one.Size = new System.Drawing.Size(300, 250);
+			this.button_show_one.TabIndex = 26;
+			this.button_show_one.Text = "Показать";
+			this.button_show_one.UseVisualStyleBackColor = true;
+			this.button_show_one.Click += new System.EventHandler(this.button_show_one_Click);
+			// 
 			// AdminScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -912,5 +925,6 @@ namespace MedicalTest
 		private System.Windows.Forms.Label label_age;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label label_test_pat_status;
+		private System.Windows.Forms.Button button_show_one;
 	}
 }

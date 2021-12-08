@@ -72,7 +72,11 @@
     <Compile Include="Servise\ExaminationServise.cs" />
     <Compile Include="Servise\IExaminationServise.cs" />
     <Compile Include="Servise\IPatientServise.cs" />
+    <Compile Include="Servise\IPlotServise.cs" />
+    <Compile Include="Servise\ISensorServise.cs" />
     <Compile Include="Servise\PatientServise.cs" />
+    <Compile Include="Servise\PlotServise.cs" />
+    <Compile Include="Servise\SensorServise.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,6 +8,11 @@ namespace Model.Entity
 {
 	public class Sensor
 	{
+		public Sensor(bool isEnable)
+		{
+			this.isEnable = isEnable;
+		}
+
 		public bool isEnable
 		{
 			get;

@@ -327,6 +327,7 @@ namespace MedicalTest
 			this.Controls.Add(this.tabControl1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "DoctorScreen";
+			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "doctorScreen";
 			this.Load += new System.EventHandler(this.DoctorScreen_Load);

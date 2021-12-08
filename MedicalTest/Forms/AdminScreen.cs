@@ -88,6 +88,43 @@ namespace MedicalTest
 			AdminScreen_Load(sender, e);
 		}
 
+		private void button_show_one_Click(object sender, EventArgs e)
+		{
+			int id = int.Parse(textBox_id_change.Text);
+			Patient patient = presenter.GetPatient(id);
+
+			if (patient != null)
+			{
+				label_update_status.Text = "Пациент найден!";
+				label_update_status.Visible = true;
+				label_update_status.ForeColor = Color.GreenYellow;
+
+				textBox_surname_change.Text = patient.firstName;
+				textBox_name_change.Text = patient.middleName;
+				textBox_dad_name_change.Text = patient.lastName;
+				numericUpDown_age_change.Value = patient.age;
+				if (patient.sex == Sex.Male)
+				{
+					radioButton_male_change.Checked = true;
+				}
+				else
+				{
+					radioButton_female_change.Checked = true;
+				}
+			}
+			else
+			{
+				textBox_surname_change.Text = string.Empty;
+				textBox_name_change.Text = string.Empty;
+				textBox_dad_name_change.Text = string.Empty;
+				numericUpDown_age_change.Value = numericUpDown_age_change.Minimum;
+
+				label_update_status.Text = "Неправильно введены данные";
+				label_update_status.Visible = true;
+				label_update_status.ForeColor = Color.Red;
+			}		
+		}
+
 		private void button_change_Click(object sender, EventArgs e)
 		{
 			int id = int.Parse(textBox_id_change.Text);

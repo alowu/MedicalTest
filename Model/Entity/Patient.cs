@@ -43,6 +43,10 @@ namespace Model.Entity
 			this.id = id;
 		}
 
+		public Patient()
+		{
+		}
+
 		public int id
 		{
 			get;

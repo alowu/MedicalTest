@@ -23,9 +23,9 @@ namespace Model.Entity
 
 	public enum SensorState
 	{ 
-		NotActive,
-		Busy,
-		Ready
+		NotActive = 0,
+		Busy = 1,
+		Ready = 2 
 	}
 
 	//TODO add others constant enums
