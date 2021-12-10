@@ -8,6 +8,33 @@ namespace Model.Servise
 {
 	public class PlotServise : IPlotServise
 	{
+		public int Generate(char sensor)
+		{
+			int value = 0;
+			Random random = new Random();
+
+
+			switch (sensor)
+			{
+				case 'p':
+					value = 150 - random.Next(36);
+					break;
+				case 'c':
+					value = 170 - random.Next(101);
+					break;
+				case 't':
+					value = 41 - random.Next(7);
+					break;
+				case 'h':
+					value = 200 - random.Next(51);
+					break;
+				case 'r':
+					value = 300 - random.Next(151);
+					break;
+			}
+
+			return value;
+		}
 		public List<int> Generate(int time, char sensor)
 		{
 			List<int> values = new List<int>(time);

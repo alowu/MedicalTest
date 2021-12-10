@@ -62,6 +62,8 @@ namespace MedicalTest
 			this.chart_humidity = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.chart_resist = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.label_date = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.button_pdf = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.chart_presure)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart_css)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart_temp)).BeginInit();
@@ -190,6 +192,7 @@ namespace MedicalTest
 			title1.Name = "Title1";
 			title1.Text = "Кровяное давление";
 			this.chart_presure.Titles.Add(title1);
+			this.chart_presure.Visible = false;
 			// 
 			// button_exit
 			// 
@@ -223,6 +226,7 @@ namespace MedicalTest
 			title2.Name = "Title1";
 			title2.Text = "Частота сердечных сокращений";
 			this.chart_css.Titles.Add(title2);
+			this.chart_css.Visible = false;
 			// 
 			// chart_temp
 			// 
@@ -246,6 +250,7 @@ namespace MedicalTest
 			title3.Name = "Title1";
 			title3.Text = "Температура";
 			this.chart_temp.Titles.Add(title3);
+			this.chart_temp.Visible = false;
 			// 
 			// chart_humidity
 			// 
@@ -269,6 +274,7 @@ namespace MedicalTest
 			title4.Name = "Title1";
 			title4.Text = "Влажность кожи";
 			this.chart_humidity.Titles.Add(title4);
+			this.chart_humidity.Visible = false;
 			// 
 			// chart_resist
 			// 
@@ -292,6 +298,7 @@ namespace MedicalTest
 			title5.Name = "Title1";
 			title5.Text = "Проводимость кожи";
 			this.chart_resist.Titles.Add(title5);
+			this.chart_resist.Visible = false;
 			// 
 			// label_date
 			// 
@@ -302,12 +309,33 @@ namespace MedicalTest
 			this.label_date.TabIndex = 27;
 			this.label_date.Text = "label4";
 			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(259, 114);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(140, 17);
+			this.label4.TabIndex = 28;
+			this.label4.Text = "Дата обследования";
+			// 
+			// button_pdf
+			// 
+			this.button_pdf.Location = new System.Drawing.Point(1011, 109);
+			this.button_pdf.Name = "button_pdf";
+			this.button_pdf.Size = new System.Drawing.Size(162, 23);
+			this.button_pdf.TabIndex = 29;
+			this.button_pdf.Text = "Create PDF";
+			this.button_pdf.UseVisualStyleBackColor = true;
+			this.button_pdf.Click += new System.EventHandler(this.button_pdf_Click);
+			// 
 			// GraphicsScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
-			this.ClientSize = new System.Drawing.Size(1364, 720);
+			this.ClientSize = new System.Drawing.Size(1385, 720);
+			this.Controls.Add(this.button_pdf);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label_date);
 			this.Controls.Add(this.chart_resist);
 			this.Controls.Add(this.chart_humidity);
@@ -362,5 +390,7 @@ namespace MedicalTest
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart_humidity;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart_resist;
 		private System.Windows.Forms.Label label_date;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Button button_pdf;
 	}
 }

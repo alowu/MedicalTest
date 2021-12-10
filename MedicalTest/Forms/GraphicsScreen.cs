@@ -20,12 +20,52 @@ namespace MedicalTest
 		private Examination examination;
 		private PlotPresenter presenter = new PlotPresenter();
 		private Timer timer = new Timer();
+		private List<Chart> charts = new List<Chart>();
+		private List<bool> state = new List<bool>();
+
+		private void AddState()
+		{ 
+			state.Add(examination.statePresure);
+			state.Add(examination.stateChss);
+			state.Add(examination.stateTemperature);
+			state.Add(examination.stateHumidity);
+			state.Add(examination.stateResist);
+
+		}
+
+		private void AddCharts()
+		{
+			charts.Add(chart_presure);
+			charts.Add(chart_css);
+			charts.Add(chart_temp);
+			charts.Add(chart_humidity);
+			charts.Add(chart_resist);
+		}
+
+		private void HideUnactive()
+		{
+			int current = 125;
+			int step = 500;
+			for (int i = 0; i < 5; i++)
+			{
+				if (state[i])
+				{
+					charts[i].Visible = true;
+					Point point = new Point(25, current);
+					charts[i].Location = point;
+					current += step;
+				}
+			}
+		}
 
 		public GraphicsScreen(Patient patient, Examination examination)
 		{
 			InitializeComponent();
 			this.patient = patient;
 			this.examination = examination;
+			AddState();
+			AddCharts();
+			HideUnactive();
 		}
 
 		private void button_exit_Click(object sender, EventArgs e)
@@ -47,12 +87,6 @@ namespace MedicalTest
 			label_type.Text = examination.physicalActive.ToString();
 			label_time.Text = examination.timeActive.ToString() + " min";
 
-			HideUnactive(examination.stateChss, chart_css);
-			HideUnactive(examination.stateHumidity, chart_humidity);
-			HideUnactive(examination.statePresure, chart_presure);
-			HideUnactive(examination.stateResist, chart_resist);
-			HideUnactive(examination.stateTemperature, chart_temp);
-
 			chart_css.Series[0].Points.Clear();
 			chart_humidity.Series[0].Points.Clear();
 			chart_presure.Series[0].Points.Clear();
@@ -63,7 +97,7 @@ namespace MedicalTest
 			timer.Start();
 			timer.Tick += Timer_tick;	
 		}
-
+		private bool isFinish = false;
 		private int current = 1;
 		private void Timer_tick(object sender, EventArgs e)
 		{
@@ -96,16 +130,25 @@ namespace MedicalTest
 			if (current == time)
 			{
 				timer.Stop();
+				isFinish = true;
 			}
 			current++;
 		}
 
-		private void HideUnactive(bool state, Chart chart)
+		private void button_pdf_Click(object sender, EventArgs e)
 		{
-			if (!state)
+			if (!isFinish)
 			{
-				chart.Visible = false;
+				MessageBox.Show("EXAM STILL RUNNING");
 			}
+			else
+			{
+				PDFCreator creator = new PDFCreator(patient, charts);
+				if (creator.Create())
+				{
+					MessageBox.Show("PDF is created in H:\\MedicalTest\\PDF\\");
+				}
+			}			
 		}
 	}
 }

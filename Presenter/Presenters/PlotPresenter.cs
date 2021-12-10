@@ -13,6 +13,11 @@ namespace Presenter.Presenters
 		private PatientServise patientServise = new PatientServise();
 		private PlotServise plotServise = new PlotServise();
 
+		public int GetValues(char sensor)
+		{
+			return plotServise.Generate(sensor);
+		}
+
 		public List<int> GetValues(int time, char sensor)
 		{
 			return plotServise.Generate(time, sensor);

@@ -18,6 +18,38 @@ namespace Model.Servise
 			_patientRepository = new PatientRepository();
 		}
 
+		private string AddSpace(string str, int len)
+		{
+			for (int i = 0; i < len; i++)
+			{
+				str += " ";
+			}
+			return str;
+		}
+
+		private Patient MakeBeautiful(Patient item)
+		{
+			string fname = item.firstName;
+			if (fname.Length < 20)
+			{
+				fname = AddSpace(fname, 20 - fname.Length);
+			}
+
+			string mname = item.middleName;
+			if (mname.Length < 20)
+			{
+				mname = AddSpace(mname, 20 - mname.Length);
+			}
+
+			string lname = item.lastName;
+			if (lname.Length < 20)
+			{
+				lname = AddSpace(lname, 20 - lname.Length);
+			}
+
+			return new Patient(item.id, fname, mname, lname, item.age, item.sex, item.hasExam);
+		}
+
 		private bool isValid(Patient item)
 		{
 			bool isValid = true;
@@ -36,7 +68,8 @@ namespace Model.Servise
 			bool valid = isValid(item);
 			if (valid)
 			{
-				return _patientRepository.Create(item);
+				Patient patient = MakeBeautiful(item);
+				return _patientRepository.Create(patient);
 			}
 			else
 			{
@@ -63,7 +96,8 @@ namespace Model.Servise
 
 			if (have && valid)
 			{
-				result = _patientRepository.Update(item);
+				Patient patient = MakeBeautiful(item);
+				result = _patientRepository.Update(patient);
 			}
 			
 			return result;
