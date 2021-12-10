@@ -36,5 +36,11 @@ namespace Model.Servise
 			}
 			return values;
 		}
+
+		public string GetDate()
+		{
+			DateTime dateTime = DateTime.Now;
+			return dateTime.ToShortDateString();
+		}
 	}
 }

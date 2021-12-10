@@ -9,5 +9,6 @@ namespace Model.Servise
 	public interface IPlotServise
 	{
 		List<int> Generate(int time, char sensor);
+		string GetDate();
 	}
 }

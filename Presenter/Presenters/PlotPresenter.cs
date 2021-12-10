@@ -23,5 +23,10 @@ namespace Presenter.Presenters
 			examinationServise.Delete(id);
 			patientServise.UpdateStatus(id);
 		}
+
+		public string GetDate()
+		{
+			return plotServise.GetDate();
+		}
 	}
 }

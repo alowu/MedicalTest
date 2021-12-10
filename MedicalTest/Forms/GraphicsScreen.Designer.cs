@@ -61,6 +61,7 @@ namespace MedicalTest
 			this.chart_temp = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.chart_humidity = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.chart_resist = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.label_date = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.chart_presure)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart_css)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart_temp)).BeginInit();
@@ -292,12 +293,22 @@ namespace MedicalTest
 			title5.Text = "Проводимость кожи";
 			this.chart_resist.Titles.Add(title5);
 			// 
+			// label_date
+			// 
+			this.label_date.AutoSize = true;
+			this.label_date.Location = new System.Drawing.Point(405, 114);
+			this.label_date.Name = "label_date";
+			this.label_date.Size = new System.Drawing.Size(46, 17);
+			this.label_date.TabIndex = 27;
+			this.label_date.Text = "label4";
+			// 
 			// GraphicsScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.ClientSize = new System.Drawing.Size(1364, 720);
+			this.Controls.Add(this.label_date);
 			this.Controls.Add(this.chart_resist);
 			this.Controls.Add(this.chart_humidity);
 			this.Controls.Add(this.chart_temp);
@@ -350,5 +361,6 @@ namespace MedicalTest
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart_temp;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart_humidity;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart_resist;
+		private System.Windows.Forms.Label label_date;
 	}
 }
