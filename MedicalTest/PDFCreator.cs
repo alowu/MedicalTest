@@ -41,13 +41,20 @@ namespace MedicalTest
 				PdfDocument pdf = new PdfDocument(writer);
 				Document document = new Document(pdf);
 
-				
+				Paragraph header = new Paragraph("RESULT")
+				.SetTextAlignment(TextAlignment.CENTER)
+				.SetFontSize(20);
+				document.Add(header);
+
 				string t = patient.firstName.Trim() + " " + patient.middleName.Trim() + " " + patient.lastName.Trim() + " examination results";
-				Text text = new Text(t)
-					.SetFontSize(15)
-					.SetHorizontalAlignment(HorizontalAlignment.CENTER);
-				Paragraph paragraph = new Paragraph(text);
+				Text text = new Text(t);
+					
+				Paragraph paragraph = new Paragraph(text).SetFontSize(15)
+					.SetTextAlignment(TextAlignment.CENTER);
 				document.Add(paragraph);
+
+				LineSeparator ls = new LineSeparator(new SolidLine());
+				document.Add(ls);
 
 				foreach (Chart item in charts)
 				{
@@ -56,8 +63,7 @@ namespace MedicalTest
 						string jps = "H:\\TEMP\\chart.jpeg";
 						item.SaveImage(jps, ChartImageFormat.Jpeg);
 						Image img = new Image(ImageDataFactory
-							.Create("H:\\TEMP\\chart.jpeg"))
-							.SetTextAlignment(TextAlignment.CENTER);
+							.Create("H:\\TEMP\\chart.jpeg"));
 						document.Add(img);
 					}
 				}
