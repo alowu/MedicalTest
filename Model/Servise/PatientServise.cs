@@ -89,5 +89,10 @@ namespace Model.Servise
 			}
 			return havePatient;
 		}
+
+		public bool UpdateStatus(int id)
+		{
+			return _patientRepository.UpdateStatus(id);
+		}
 	}
 }

@@ -201,5 +201,28 @@ namespace Model
 			}
 			return patient;
 		}
+
+		public bool UpdateStatus(int id)
+		{
+			bool result = false;
+
+			try
+			{
+				sqlCommand = new SqlCommand("UPDATE [Patients] SET [hasExam]=@hasExam WHERE [id]=@id", DB._getConnection());
+
+				sqlCommand.Parameters.AddWithValue("id", id);
+				sqlCommand.Parameters.AddWithValue("hasExam", 0);
+
+				sqlCommand.ExecuteNonQuery();
+
+				result = true;
+			}
+			catch (Exception ex)
+			{
+				Console.Error.WriteLine("Can't UPDATE Examination INTO PATIENTS!\n" + ex.ToString());
+			}
+
+			return result;
+		}
 	}
 }

@@ -21,7 +21,7 @@ namespace Presenter.Presenters
 		public void Remove(int id)
 		{
 			examinationServise.Delete(id);
-			patientServise.Delete(id);
+			patientServise.UpdateStatus(id);
 		}
 	}
 }
