@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,17 +30,22 @@ namespace MedicalTest
 		{
 		}
 
-		public bool Create()
+		public string Create()
 		{
-			bool result = false;
+			string result = null;
 			try
 			{
-				string filename = "H:\\MedicalTest\\PDF\\";
+				string desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "/MD_RES/";
+				if (!Directory.Exists(desktop))
+				{
+					Directory.CreateDirectory(desktop);
+				}
+				string filename = desktop;
 				string pat = patient.firstName.Trim() + "_" + patient.middleName.Trim() + "_" + patient.lastName.Trim();
 				filename += DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + "_" + pat + ".pdf";
 				PdfWriter writer = new PdfWriter(filename);
 				PdfDocument pdf = new PdfDocument(writer);
-				Document document = new Document(pdf);
+				Document document = new Document(pdf);	
 
 				Paragraph header = new Paragraph("RESULT")
 				.SetTextAlignment(TextAlignment.CENTER)
@@ -60,15 +66,16 @@ namespace MedicalTest
 				{
 					if (item.Visible == true)
 					{
-						string jps = "H:\\TEMP\\chart.jpeg";
-						item.SaveImage(jps, ChartImageFormat.Jpeg);
+						string path = Path.GetTempPath();
+						string jpeg = path + "/chart.jpeg";
+						item.SaveImage(jpeg, ChartImageFormat.Jpeg);
 						Image img = new Image(ImageDataFactory
-							.Create("H:\\TEMP\\chart.jpeg"));
+							.Create(jpeg));
 						document.Add(img);
 					}
 				}
 				document.Close();
-				result = true;
+				result = desktop;
 			}
 			catch (Exception ex)
 			{

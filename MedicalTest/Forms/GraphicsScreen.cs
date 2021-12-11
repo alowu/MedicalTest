@@ -144,9 +144,10 @@ namespace MedicalTest
 			else
 			{
 				PDFCreator creator = new PDFCreator(patient, charts);
-				if (creator.Create())
+				string result = creator.Create();
+				if (result != null)
 				{
-					MessageBox.Show("PDF is created in H:\\MedicalTest\\PDF\\");
+					MessageBox.Show("PDF is created in " + result);
 				}
 			}			
 		}
